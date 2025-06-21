@@ -29,6 +29,7 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 # general
 export EDITOR="nvim"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export TERM=xterm-256color # fixed ghostty ssh backspace
 
 # specific python packages require this
@@ -44,6 +45,9 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 # manage versions across various tools
 eval "$(mise activate zsh)"
+
+# orbstack
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 
 
