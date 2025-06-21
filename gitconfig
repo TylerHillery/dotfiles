@@ -1,0 +1,11 @@
+[user]
+        name = Tyler Hillery
+        email = tyhillery@gmail.com 
+[init]
+        defaultBranch = main
+[pull]
+        rebase = true
+[credential]
+        helper = /usr/local/share/gcm-core/git-credential-manager
+[rerere]
+        enabled = true

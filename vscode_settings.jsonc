@@ -1,0 +1,89 @@
+{
+  // editor settings
+  "editor.rulers": [80],
+  "editor.fontSize": 16,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.mouseWheelZoom": true,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSurroundingLines": 10,
+  "editor.accessibilitySupport": "off", // vs code was making random noises
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+  // terminal settings
+  "terminal.integrated.fontSize": 16,
+  // git settings 
+  "scm.defaultViewMode": "tree",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "git.openRepositoryInParentFolders": "always",
+  "diffEditor.renderSideBySide": false,
+  // zen mode settings
+  "zenMode.hideLineNumbers": false,
+  // make vs code less busy
+  "explorer.compactFolders": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.navigationControl.enabled": false,
+  "oneDarkPro.editorTheme": "Gnome",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {
+    "editorOverviewRuler.addedForeground": "#0000",
+    "editorOverviewRuler.bracketMatchForeground": "#0000",
+    "editorOverviewRuler.commentForeground": "#0000",
+    "editorOverviewRuler.commentUnresolvedForeground": "#0000",
+    "editorOverviewRuler.commonContentForeground": "#0000",
+    "editorOverviewRuler.currentContentForeground": "#0000",
+    "editorOverviewRuler.deletedForeground": "#0000",
+    "editorOverviewRuler.errorForeground": "#0000",
+    "editorOverviewRuler.findMatchForeground": "#0000",
+    "editorOverviewRuler.incomingContentForeground": "#0000",
+    "editorOverviewRuler.infoForeground": "#0000",
+    "editorOverviewRuler.inlineChatInserted": "#0000",
+    "editorOverviewRuler.inlineChatRemoved": "#0000",
+    "editorOverviewRuler.modifiedForeground": "#0000",
+    "editorOverviewRuler.rangeHighlightForeground": "#0000",
+    "editorOverviewRuler.selectionHighlightForeground": "#0000",
+    "editorOverviewRuler.warningForeground": "#0000",
+    "editorOverviewRuler.wordHighlightForeground": "#0000",
+    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
+    "editorOverviewRuler.wordHighlightTextForeground": "#0000",
+    "terminalCommandDecoration.defaultBackground": "#0000",
+    "terminalCommandDecoration.errorBackground": "#0000",
+    "terminalCommandDecoration.successBackground": "#0000",
+    "terminalOverviewRuler.border": "#0000"
+  },
+  "search.defaultViewMode": "tree",
+  "window.zoomLevel": 0,
+  "files.autoSave": "afterDelay",
+  // vim settings
+  "vim.leader": "<Space>",
+  "vim.useSystemClipboard": true,
+  // language specific stuff
+  "python.terminal.activateEnvironment": false,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  // extension settings 
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  // for dbt power user
+  "dbt.enableNewLineagePanel": true,
+  "files.associations": {
+    "*.sql": "jinja-sql"
+  },
+  // ai stuff
+  "inlineChat.lineNaturalLanguageHint": false,
+  "github.copilot.enable": {
+    "*": false
+  },
+  "chat.commandCenter.enabled": false,
+  "chat.agent.enabled": true
+}
