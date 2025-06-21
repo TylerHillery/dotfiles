@@ -81,6 +81,7 @@ cask 'spotify'
 cask 'betterdisplay'
 cask 'logi-options+'
 cask 'logitune'
+cask 'google-cloud-sdk'
 
 
 # vscode
