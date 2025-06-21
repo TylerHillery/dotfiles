@@ -25,7 +25,6 @@ brew 'neofetch'
 brew 'atuin'
 brew 'btop'
 brew 'hyperfine'
-brew 'uv'
 brew 'mise'
 
 # dbs
@@ -53,6 +52,7 @@ brew 'libxmlsec1'
 brew 'lapack'
 brew 'openblas'
 brew 'pkgconf' # needed for python
+brew 'gnupg'
 
 # casks
 cask 'git-credential-manager'

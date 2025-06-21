@@ -36,10 +36,6 @@ export TERM=xterm-256color # fixed ghostty ssh backspace
 export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
-# Tool environments
-. "$HOME/.cargo/env"
-. "$HOME/.atuin/bin/env"
-
 # atuin for better ctrl+r
 eval "$(atuin init zsh --disable-up-arrow)"
 
