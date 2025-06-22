@@ -12,6 +12,7 @@ brew 'tree'
 brew 'wget'
 brew 'curl'
 brew 'telnet'
+brew 'ffmpeg'
 
 # faster utils
 brew 'fd'
