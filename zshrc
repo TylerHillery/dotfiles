@@ -32,6 +32,7 @@ export EDITOR="nvim"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export TERM=xterm-256color # fixed ghostty ssh backspace
 export PATH="$HOME/.local/bin:$PATH" # local scripts
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # specific python packages require this
 export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
