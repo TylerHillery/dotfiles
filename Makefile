@@ -37,7 +37,7 @@ mise: $(HOME)/.config/mise/config.toml
 install:
 	./install.sh
 
-update:
+brew:
 	brew bundle --file=$(DOTFILE_PATH)/Brewfile
 	brew bundle cleanup --file=$(DOTFILE_PATH)/Brewfile --force
 

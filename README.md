@@ -18,11 +18,5 @@ make all
 ## Installing with homebrew
 
 ```
-brew bundle --file=~/.dotfiles/Brewfile
-```
-
-and
-
-```
-brew bundle --force cleanup --file=~/.dotfiles/Brewfile
+make brew 
 ```
