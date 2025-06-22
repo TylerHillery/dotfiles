@@ -34,10 +34,6 @@ $(HOME)/.config/mise/config.toml:
 
 mise: $(HOME)/.config/mise/config.toml
 
-plist:
-	cp $(DOTFILE_PATH)/rectangle.plist $(HOME)/Library/Preferences/com.knollsoft.Rectangle.plist
-	cp $(DOTFILE_PATH)/alttab.plist $(HOME)/Library/Preferences/com.lwouis.alt-tab-macos.plist
-
 install:
 	./install.sh
 
@@ -45,4 +41,4 @@ update:
 	brew bundle --file=$(DOTFILE_PATH)/Brewfile
 	brew bundle cleanup --file=$(DOTFILE_PATH)/Brewfile --force
 
-all: install git zsh oh-my-zsh ghostty vscode mise plist
+all: install git zsh oh-my-zsh ghostty vscode mise

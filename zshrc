@@ -31,6 +31,7 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 export EDITOR="nvim"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export TERM=xterm-256color # fixed ghostty ssh backspace
+export PATH="$HOME/.local/bin:$PATH" # local scripts
 
 # specific python packages require this
 export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
@@ -44,6 +45,7 @@ eval "$(mise activate zsh)"
 
 # orbstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
 
 
 

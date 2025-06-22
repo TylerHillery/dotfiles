@@ -1,7 +1,6 @@
 # taps
 tap 'pulumi/tap'
 tap 'supabase/tap'
-tap 'homebrew/cask-fonts'
 
 # core utils
 brew 'git'
@@ -133,7 +132,6 @@ vscode 'samuelcolvin.jinjahtml'
 vscode 'rangav.vscode-thunder-client'
 
 # mas
-mas 'Xcode', id: 497799835
 mas 'Kindle', id: 405399194
 mas 'Tailscale', id: 1475387142
 mas 'Microsoft Excel', id: 462058435
