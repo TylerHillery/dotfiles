@@ -20,3 +20,9 @@ make all
 ```
 make brew 
 ```
+
+The original file was generated with:
+
+```
+brew bundle dump --file=Brewfile
+```
