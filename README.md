@@ -26,3 +26,11 @@ The original file was generated with:
 ```
 brew bundle dump --file=Brewfile
 ```
+
+## Reconciling your Brewfile
+
+To check if you've installed packages outside of your dotfiles environment:
+
+```
+make brew-reconcile
+```

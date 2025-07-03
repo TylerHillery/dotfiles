@@ -41,4 +41,16 @@ brew:
 	brew bundle --file=$(DOTFILE_PATH)/Brewfile
 	brew bundle cleanup --file=$(DOTFILE_PATH)/Brewfile --force
 
+brew-reconcile:
+	@echo "Dumping current brew state and comparing with Brewfile..."
+	brew bundle dump --file=$(DOTFILE_PATH)/Brewfile.current --force
+	@echo "\nDifferences between your Brewfile and current installed packages:"
+	@echo "Lines starting with '<' are in your Brewfile but not installed"
+	@echo "Lines starting with '>' are installed but not in your Brewfile"
+	@bash -c 'diff --color=always <(grep -v "^#" $(DOTFILE_PATH)/Brewfile | grep -v "^$$" | sort) <(grep -v "^#" $(DOTFILE_PATH)/Brewfile.current | grep -v "^$$" | sort) || true'
+	@echo "\nTo update your Brewfile with currently installed packages:"
+	@echo "  mv Brewfile.current Brewfile"
+	@echo "To clean up the temporary file:"
+	@echo "  rm Brewfile.current"
+
 all: install git zsh oh-my-zsh ghostty vscode mise
