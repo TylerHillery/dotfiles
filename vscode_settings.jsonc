@@ -72,6 +72,9 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   // extension settings 
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   // for dbt power user
@@ -85,5 +88,6 @@
     "*": false
   },
   "chat.commandCenter.enabled": false,
-  "chat.agent.enabled": true
+  "chat.agent.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": false 
 }
