@@ -1,6 +1,7 @@
 # taps
 tap "pulumi/tap"
 tap "supabase/tap"
+tap "sst/tap"
 
 # core utils
 brew "git"
@@ -42,6 +43,7 @@ brew "aws-vault"
 brew "supabase/tap/supabase"
 brew "pulumi/tap/esc"
 brew "pulumi/tap/pulumi"
+brew "sst/tap/opencode"
 
 # other?
 brew "openssl"
@@ -67,6 +69,7 @@ cask "dbeaver-community"
 cask "orbstack"
 cask "bitwarden"
 cask "insomnia"
+cask "linear-linear"
 cask "notion"
 cask "reader"
 cask "anki"
