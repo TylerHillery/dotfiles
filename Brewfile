@@ -120,6 +120,11 @@ vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
+## c/c++ extension pack 
+vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpptools-extension-pack"
+vscode "ms-vscode.cpptools-themes"
+vscode "ms-vscode.cpptools"
 ## remote extension pack
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
@@ -136,6 +141,6 @@ vscode "samuelcolvin.jinjahtml"
 vscode "rangav.vscode-thunder-client"
 
 # mas
-mas "Kindle", id: 405399194
+mas "Kindle", id: 302584613
 mas "Tailscale", id: 1475387142
 mas "Microsoft Excel", id: 462058435
