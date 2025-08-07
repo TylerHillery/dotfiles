@@ -5,7 +5,6 @@ tap "sst/tap"
 
 # core utils
 brew "git"
-brew "gcc"
 brew "make"
 brew "cmake"
 brew "jq"
@@ -29,7 +28,6 @@ brew "hyperfine"
 brew "mise"
 
 # dbs
-brew "sqlite3"
 brew "duckdb"
 brew "libpq"
 brew "mysql-client"
@@ -46,7 +44,7 @@ brew "pulumi/tap/pulumi"
 brew "sst/tap/opencode"
 
 # other?
-brew "openssl"
+brew "openssl@3"
 brew "abseil"
 brew "xz"
 brew "zlib"
@@ -54,7 +52,7 @@ brew "libxml2"
 brew "libxmlsec1"
 brew "lapack"
 brew "openblas"
-brew "pkgconf" # needed for python
+brew "pkgconf"
 brew "gnupg"
 brew "mas"
 
@@ -85,7 +83,7 @@ cask "spotify"
 cask "betterdisplay"
 cask "logi-options+"
 cask "logitune"
-cask "google-cloud-sdk"
+cask "gcloud-cli"
 
 
 # vscode
