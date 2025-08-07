@@ -37,6 +37,8 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # specific python packages require this
 export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/opt/libpq/lib $LDFLAGS"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include -I/opt/homebrew/opt/libpq/include $CPPFLAGS"
 
 # atuin for better ctrl+r
 eval "$(atuin init zsh --disable-up-arrow)"

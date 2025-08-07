@@ -13,12 +13,13 @@
   "editor.cursorSurroundingLines": 10,
   "editor.accessibilitySupport": "off", // vs code was making random noises
   "editor.acceptSuggestionOnEnter": "off",
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.hideCursorInOverviewRuler": true,
   "editor.overviewRulerBorder": false,
   // terminal settings
   "terminal.integrated.fontSize": 16,
-  // git settings 
+  // git settings
   "scm.defaultViewMode": "tree",
   "diffEditor.ignoreTrimWhitespace": false,
   "git.openRepositoryInParentFolders": "always",
@@ -73,9 +74,11 @@
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
   },
-  // extension settings 
+  // extension settings
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   // for dbt power user
   "dbt.enableNewLineagePanel": true,
@@ -89,5 +92,6 @@
   },
   "chat.commandCenter.enabled": false,
   "chat.agent.enabled": true,
-  "github.copilot.nextEditSuggestions.enabled": false 
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "workbench.editor.empty.hint": "hidden"
 }

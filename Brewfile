@@ -56,6 +56,7 @@ brew "lapack"
 brew "openblas"
 brew "pkgconf" # needed for python
 brew "gnupg"
+brew "mas"
 
 # casks
 cask "git-credential-manager"
@@ -144,3 +145,4 @@ vscode "rangav.vscode-thunder-client"
 mas "Kindle", id: 302584613
 mas "Tailscale", id: 1475387142
 mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
