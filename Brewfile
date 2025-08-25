@@ -38,7 +38,7 @@ brew "ykman"
 brew "gh"
 brew "awscli"
 brew "aws-vault"
-brew "supabase/tap/supabase"
+brew "supabase/tap/supabase-beta"
 brew "pulumi/tap/esc"
 brew "pulumi/tap/pulumi"
 brew "sst/tap/opencode"
@@ -138,8 +138,11 @@ vscode "esbenp.prettier-vscode"
 vscode "yoavbls.pretty-ts-errors"
 vscode "samuelcolvin.jinjahtml"
 vscode "rangav.vscode-thunder-client"
+vscode "denoland.vscode-deno"
+vscode "ckolkman.vscode-postgres"
 
 # mas
+mas "iMovie", id: 408981434
 mas "Kindle", id: 302584613
 mas "Tailscale", id: 1475387142
 mas "Microsoft Excel", id: 462058435
