@@ -5,7 +5,9 @@ bun = "latest"
 pnpm = "latest"
 go = "latest"
 uv = "latest"
+java = "temurin-21.0.8+9.0.LTS"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python", "node"]
 status.missing_tools = "never"
+experimental = true
