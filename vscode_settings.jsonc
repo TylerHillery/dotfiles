@@ -19,6 +19,7 @@
   "editor.overviewRulerBorder": false,
   // terminal settings
   "terminal.integrated.fontSize": 16,
+  "terminal.integrated.stickyScroll.enabled": false,
   // git settings
   "scm.defaultViewMode": "tree",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -93,5 +94,14 @@
   "chat.commandCenter.enabled": false,
   "chat.agent.enabled": true,
   "github.copilot.nextEditSuggestions.enabled": false,
-  "workbench.editor.empty.hint": "hidden"
+  "workbench.editor.empty.hint": "hidden",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
