@@ -26,6 +26,7 @@ brew "atuin"
 brew "btop"
 brew "hyperfine"
 brew "mise"
+brew "git-delta"
 
 # dbs
 brew "duckdb"
@@ -132,13 +133,14 @@ vscode "ms-vscode-remote.vscode-remote-extensionpack"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "ms-vsliveshare.vsliveshare"
-## web (js/ts/css/html)
+## web (js/ts/css/html/web)
 vscode "esbenp.prettier-vscode"
 vscode "yoavbls.pretty-ts-errors"
 vscode "samuelcolvin.jinjahtml"
 vscode "rangav.vscode-thunder-client"
 vscode "denoland.vscode-deno"
 vscode "ckolkman.vscode-postgres"
+vscode "ritwickdey.liveserver"
 
 # mas
 mas "iMovie", id: 408981434

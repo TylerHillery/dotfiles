@@ -44,6 +44,7 @@ brew:
 brew-reconcile:
 	@echo "Dumping current brew state and comparing with Brewfile..."
 	brew bundle dump --file=$(DOTFILE_PATH)/Brewfile.current --force
+	@grep -v '^go ' $(DOTFILE_PATH)/Brewfile.current > $(DOTFILE_PATH)/Brewfile.current.tmp && mv $(DOTFILE_PATH)/Brewfile.current.tmp $(DOTFILE_PATH)/Brewfile.current
 	@echo "\nDifferences between your Brewfile and current installed packages:"
 	@echo "Lines starting with '<' are in your Brewfile but not installed"
 	@echo "Lines starting with '>' are installed but not in your Brewfile"
