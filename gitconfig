@@ -10,11 +10,13 @@
 [rerere]
         enabled = true
 [core]
-    pager = delta
+        pager = delta
 [interactive]
-    diffFilter = delta --color-only
+        diffFilter = delta --color-only
 [delta]
-    navigate = true  # use n and N to move between diff sections
-    side-by-side = true
+        navigate = true  # use n and N to move between diff sections
+        side-by-side = true
 [merge]
-    conflictStyle = zdiff3
+        conflictStyle = zdiff3
+[branch]
+        autoSetupMerge = false # so when I checkout another person's branch it doesn't auto set it as upstream

@@ -1,7 +1,5 @@
 # taps
 tap "pulumi/tap"
-tap "supabase/tap"
-tap "sst/tap"
 
 # core utils
 brew "git"
@@ -39,10 +37,8 @@ brew "ykman"
 brew "gh"
 brew "awscli"
 brew "aws-vault"
-brew "supabase/tap/supabase-beta"
 brew "pulumi/tap/esc"
 brew "pulumi/tap/pulumi"
-brew "sst/tap/opencode"
 
 # other?
 brew "openssl@3"
@@ -65,9 +61,10 @@ cask "rectangle"
 cask "google-chrome"
 cask "ghostty"
 cask "visual-studio-code"
-cask "dbeaver-community"
+cask "datagrip"
 cask "orbstack"
 cask "bitwarden"
+cask "ngrok"
 cask "linear-linear"
 cask "notion"
 cask "reader"
@@ -92,28 +89,25 @@ cask "gcloud-cli"
 vscode "pkief.material-icon-theme"
 vscode "zhuangtongfa.material-theme"
 ## intellisense and ai
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
-vscode "visualstudioexptteam.vscodeintellicode"
 vscode "github.copilot"
 vscode "github.copilot-chat"
+vscode "sourcegraph.amp"
 ## other
 vscode "vscodevim.vim"
 vscode "eamodio.gitlens"
-vscode "gruntfuggly.todo-tree"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "quarto.quarto"
 ## containers
-vscode "docker.docker"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 ## dbt
 vscode "altimateai.vscode-altimate-mcp-server"
 vscode "innoverio.vscode-dbt-power-user"
 ## python
+vscode "astral-sh.ty"
 vscode "charliermarsh.ruff"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
 vscode "ms-toolsai.jupyter"
 vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
@@ -128,19 +122,18 @@ vscode "ms-vscode.cpptools"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode-remote.remote-wsl"
 vscode "ms-vscode-remote.vscode-remote-extensionpack"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "ms-vsliveshare.vsliveshare"
 ## web (js/ts/css/html/web)
 vscode "esbenp.prettier-vscode"
+vscode "dbaeumer.vscode-eslint"
 vscode "yoavbls.pretty-ts-errors"
 vscode "samuelcolvin.jinjahtml"
-vscode "rangav.vscode-thunder-client"
 vscode "denoland.vscode-deno"
-vscode "ckolkman.vscode-postgres"
 vscode "ritwickdey.liveserver"
+vscode "bradlc.vscode-tailwindcss"
 
 # mas
 mas "iMovie", id: 408981434
@@ -148,3 +141,5 @@ mas "Kindle", id: 302584613
 mas "Tailscale", id: 1475387142
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft OneNote", id: 784801555
+mas "Microsoft PowerPoint", id: 462062816
+mas "ScreenBrush", id: 1233965871

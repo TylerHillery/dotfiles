@@ -5,7 +5,8 @@ bun = "latest"
 pnpm = "latest"
 go = "latest"
 uv = "latest"
-java = "temurin-21.0.8+9.0.LTS"
+java = "latest"
+rust = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python", "node"]

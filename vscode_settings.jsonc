@@ -14,12 +14,14 @@
   "editor.accessibilitySupport": "off", // vs code was making random noises
   "editor.acceptSuggestionOnEnter": "off",
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.wordBasedSuggestions": "off",
   "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.hideCursorInOverviewRuler": true,
   "editor.overviewRulerBorder": false,
   // terminal settings
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.suggest.enabled": false,
   // git settings
   "scm.defaultViewMode": "tree",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -34,6 +36,7 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.navigationControl.enabled": false,
+  "workbench.editor.empty.hint": "hidden",
   "oneDarkPro.editorTheme": "Gnome",
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "material-icon-theme",
@@ -71,6 +74,9 @@
   "vim.useSystemClipboard": true,
   // language specific stuff
   "python.terminal.activateEnvironment": false,
+  "python.languageServer": "None",
+  "ty.inlayHints.callArgumentNames": false,
+  "ty.inlayHints.variableTypes": false,
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
@@ -79,29 +85,31 @@
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
-  // extension settings
-  "jupyter.interactiveWindow.textEditor.executeSelection": true,
-  // for dbt power user
-  "dbt.enableNewLineagePanel": true,
-  "files.associations": {
-    "*.sql": "jinja-sql"
-  },
-  // ai stuff
-  "inlineChat.lineNaturalLanguageHint": false,
-  "github.copilot.enable": {
-    "*": false
-  },
-  "chat.commandCenter.enabled": false,
-  "chat.agent.enabled": true,
-  "github.copilot.nextEditSuggestions.enabled": false,
-  "workbench.editor.empty.hint": "hidden",
   "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[javascript]": {
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  // extension settings
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  // for dbt power user
+  "dbt.enableNewLineagePanel": true,
+  // ai stuff
+  "chat.agent.enabled": true,
+  "chat.commandCenter.enabled": false,
+  "inlineChat.lineNaturalLanguageHint": false,
+  "github.copilot.enable": { "*": false },
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "amp.url": "https://ampcode.com/",
+  "amp.tab.enabled": false
 }

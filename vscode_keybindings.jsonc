@@ -28,5 +28,15 @@
         "key": "space",
         "command": "-refactorPreview.toggleCheckedState",
         "when": "listFocus && refactorPreview.enabled && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "cmd+k a",
+        "command": "amp.agent.toggleVisibility",
+        "when": "amp.primaryShortcuts"
+    },
+    {
+        "key": "cmd+i",
+        "command": "-amp.agent.toggleVisibility",
+        "when": "amp.primaryShortcuts"
     }
 ]
