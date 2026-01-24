@@ -7,6 +7,7 @@ go = "latest"
 uv = "latest"
 java = "latest"
 rust = "latest"
+prek = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python", "node"]
