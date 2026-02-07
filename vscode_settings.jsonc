@@ -110,6 +110,4 @@
   "inlineChat.lineNaturalLanguageHint": false,
   "github.copilot.enable": { "*": false },
   "github.copilot.nextEditSuggestions.enabled": false,
-  "amp.url": "https://ampcode.com/",
-  "amp.tab.enabled": false
 }

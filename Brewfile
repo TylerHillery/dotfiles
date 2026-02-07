@@ -10,6 +10,7 @@ brew "tree"
 brew "wget"
 brew "curl"
 brew "telnet"
+brew "wireshark"
 brew "ffmpeg"
 
 # faster utils
@@ -52,6 +53,7 @@ brew "openblas"
 brew "pkgconf"
 brew "gnupg"
 brew "mas"
+brew "flock"
 
 # casks
 cask "git-credential-manager"
@@ -92,7 +94,6 @@ vscode "zhuangtongfa.material-theme"
 ## intellisense and ai
 vscode "github.copilot"
 vscode "github.copilot-chat"
-vscode "sourcegraph.amp"
 ## other
 vscode "vscodevim.vim"
 vscode "eamodio.gitlens"
@@ -101,6 +102,8 @@ vscode "quarto.quarto"
 vscode "hverlin.mise-vscode"
 vscode "mikestead.dotenv"
 vscode "tamasfe.even-better-toml"
+vscode "bierner.markdown-mermaid"
+vscode "github.vscode-github-actions"
 ## containers
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
@@ -122,6 +125,8 @@ vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.cpptools"
+# rust
+vscode "rust-lang.rust-analyzer"
 ## remote extension pack
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"

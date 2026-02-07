@@ -34,3 +34,23 @@ To check if you've installed packages outside of your dotfiles environment:
 ```
 make brew-reconcile
 ```
+
+## Managing tools with mise
+
+Install all configured tools from `mise_config.toml`:
+
+```
+mise install
+```
+
+Clean up unused tool versions:
+
+```
+mise prune
+```
+
+List installed tools:
+
+```
+mise list
+```
