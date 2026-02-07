@@ -16,7 +16,10 @@ $(HOME)/.config/ghostty/config:
 	mkdir -p $(HOME)/.config/ghostty
 	ln -sf $(DOTFILE_PATH)/ghostty_config $(HOME)/.config/ghostty/config
 
-ghostty: $(HOME)/.config/ghostty/config
+$(HOME)/.config/ghostty/vim.ghostty:
+	ln -sf $(DOTFILE_PATH)/vim.ghostty $(HOME)/.config/ghostty/vim.ghostty
+
+ghostty: $(HOME)/.config/ghostty/config $(HOME)/.config/ghostty/vim.ghostty
 
 $(HOME)/Library/Application\ Support/Code/User/settings.json:
 	mkdir -p "$(HOME)/Library/Application Support/Code/User"

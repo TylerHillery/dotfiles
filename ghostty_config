@@ -4,3 +4,7 @@ font-feature = -calt
 font-family = JetBrainsMono Nerd Font Mono
 cursor-style-blink = false
 shell-integration-features = no-cursor
+auto-update-channel = tip
+macos-option-as-alt = true
+
+config-file = ~/.config/ghostty/vim.ghostty
