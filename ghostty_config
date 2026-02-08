@@ -6,5 +6,6 @@ cursor-style-blink = false
 shell-integration-features = no-cursor
 auto-update-channel = tip
 macos-option-as-alt = true
+window-save-state = always
 
-config-file = ~/.config/ghostty/vim.ghostty
+config-file = ${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/vim.ghostty
