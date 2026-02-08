@@ -41,7 +41,7 @@ export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/opt/libpq/lib 
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include -I/opt/homebrew/opt/libpq/include $CPPFLAGS"
 
 # opencode
-export PATH=/Users/tyler/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
 
 # atuin for better ctrl+r
 eval "$(atuin init zsh --disable-up-arrow)"
@@ -51,7 +51,6 @@ eval "$(mise activate zsh)"
 
 # orbstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
-
 
 
 

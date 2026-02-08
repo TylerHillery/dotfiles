@@ -1,4 +1,5 @@
 DOTFILE_PATH := $(shell pwd)
+XDG_CONFIG_HOME ?= $(HOME)/.config
 
 $(HOME)/.%: %
 	ln -sf $(DOTFILE_PATH)/$^ $@
@@ -12,14 +13,14 @@ $(HOME)/.oh-my-zsh/custom/themes/tylerhillery.zsh-theme:
 
 oh-my-zsh: $(HOME)/.oh-my-zsh/custom/themes/tylerhillery.zsh-theme
 
-$(HOME)/.config/ghostty/config:
-	mkdir -p $(HOME)/.config/ghostty
-	ln -sf $(DOTFILE_PATH)/ghostty_config $(HOME)/.config/ghostty/config
+$(XDG_CONFIG_HOME)/ghostty/config:
+	mkdir -p $(XDG_CONFIG_HOME)/ghostty
+	ln -sf $(DOTFILE_PATH)/ghostty_config $(XDG_CONFIG_HOME)/ghostty/config
 
-$(HOME)/.config/ghostty/vim.ghostty:
-	ln -sf $(DOTFILE_PATH)/vim.ghostty $(HOME)/.config/ghostty/vim.ghostty
+$(XDG_CONFIG_HOME)/ghostty/vim.ghostty:
+	ln -sf $(DOTFILE_PATH)/vim.ghostty $(XDG_CONFIG_HOME)/ghostty/vim.ghostty
 
-ghostty: $(HOME)/.config/ghostty/config $(HOME)/.config/ghostty/vim.ghostty
+ghostty: $(XDG_CONFIG_HOME)/ghostty/config $(XDG_CONFIG_HOME)/ghostty/vim.ghostty
 
 $(HOME)/Library/Application\ Support/Code/User/settings.json:
 	mkdir -p "$(HOME)/Library/Application Support/Code/User"
@@ -31,11 +32,11 @@ $(HOME)/Library/Application\ Support/Code/User/keybindings.json:
 
 vscode: $(HOME)/Library/Application\ Support/Code/User/settings.json $(HOME)/Library/Application\ Support/Code/User/keybindings.json
 
-$(HOME)/.config/mise/config.toml:
-	mkdir -p $(HOME)/.config/mise
-	ln -sf $(DOTFILE_PATH)/mise_config.toml $(HOME)/.config/mise/config.toml
+$(XDG_CONFIG_HOME)/mise/config.toml:
+	mkdir -p $(XDG_CONFIG_HOME)/mise
+	ln -sf $(DOTFILE_PATH)/mise_config.toml $(XDG_CONFIG_HOME)/mise/config.toml
 
-mise: $(HOME)/.config/mise/config.toml
+mise: $(XDG_CONFIG_HOME)/mise/config.toml
 
 install:
 	./install.sh
