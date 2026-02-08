@@ -10,7 +10,6 @@ brew "tree"
 brew "wget"
 brew "curl"
 brew "telnet"
-brew "wireshark"
 brew "ffmpeg"
 
 # faster utils
@@ -40,6 +39,7 @@ brew "awscli"
 brew "aws-vault"
 brew "pulumi/tap/esc"
 brew "pulumi/tap/pulumi"
+brew "wireshark"
 
 # other?
 brew "openssl@3"
@@ -66,6 +66,7 @@ cask "visual-studio-code"
 cask "datagrip"
 cask "orbstack"
 cask "bitwarden"
+cask "wireshark-app"
 cask "ngrok"
 cask "yaak"
 cask "linear-linear"
