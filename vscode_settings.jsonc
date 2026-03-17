@@ -22,11 +22,12 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.suggest.enabled": false,
+  "terminal.integrated.tabs.location": "left",
   // git settings
   "scm.defaultViewMode": "tree",
   "diffEditor.ignoreTrimWhitespace": false,
   "git.openRepositoryInParentFolders": "always",
-  "diffEditor.renderSideBySide": false,
+  "diffEditor.renderSideBySide": true,
   // zen mode settings
   "zenMode.hideLineNumbers": false,
   // make vs code less busy
@@ -68,6 +69,9 @@
   },
   "search.defaultViewMode": "tree",
   "window.zoomLevel": 0,
+  "window.nativeTabs": true,
+  "window.title": "${rootName}",
+  "window.commandCenter": false,
   "files.autoSave": "afterDelay",
   // vim settings
   "vim.leader": "<Space>",
@@ -81,17 +85,15 @@
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
@@ -100,14 +102,30 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  },
   // extension settings
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  // gitlens,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.plusFeatures.enabled": false,
   // for dbt power user
   "dbt.enableNewLineagePanel": true,
   // ai stuff
   "chat.agent.enabled": true,
   "chat.commandCenter.enabled": false,
+  "chat.agentsControl.enabled": false,
   "inlineChat.lineNaturalLanguageHint": false,
   "github.copilot.enable": { "*": false },
   "github.copilot.nextEditSuggestions.enabled": false,
+  // other
+  "redhat.telemetry.enabled": false
 }

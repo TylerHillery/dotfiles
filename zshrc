@@ -43,6 +43,10 @@ export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include -I/opt/homebrew/opt/libpq
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
 
+# pg_duckdb
+PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config
+
 # atuin for better ctrl+r
 eval "$(atuin init zsh --disable-up-arrow)"
 
@@ -52,5 +56,5 @@ eval "$(mise activate zsh)"
 # orbstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
-
-
+# direnv
+eval "$(direnv hook zsh)"

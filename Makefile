@@ -5,7 +5,8 @@ $(HOME)/.%: %
 	ln -sf $(DOTFILE_PATH)/$^ $@
 
 git: $(HOME)/.gitconfig
-zsh: $(HOME)/.zshrc $(HOME)/.zsh.d 
+zsh: $(HOME)/.zshrc $(HOME)/.zsh.d
+tmux: $(HOME)/.tmux.conf 
 
 $(HOME)/.oh-my-zsh/custom/themes/tylerhillery.zsh-theme:
 	mkdir -p $(HOME)/.oh-my-zsh/custom/themes
@@ -58,4 +59,4 @@ brew-reconcile:
 	@echo "To clean up the temporary file:"
 	@echo "  rm Brewfile.current"
 
-all: install git zsh oh-my-zsh ghostty vscode mise
+all: install git zsh tmux oh-my-zsh ghostty vscode mise

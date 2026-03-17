@@ -1,5 +1,7 @@
 # taps
 tap "pulumi/tap"
+tap "benbjohnson/litestream"
+tap "supabase/tap"
 
 # core utils
 brew "git"
@@ -16,6 +18,7 @@ brew "ffmpeg"
 brew "fd"
 brew "fzf"
 brew "ripgrep"
+brew "ninja"
 
 # my utils 
 brew "neovim"
@@ -25,12 +28,15 @@ brew "btop"
 brew "hyperfine"
 brew "mise"
 brew "git-delta"
+brew "direnv"
 
 # dbs
 brew "duckdb"
 brew "libpq"
 brew "mysql-client"
 brew "redis"
+brew "supabase/tap/supabase"
+brew "benbjohnson/litestream/litestream"
 
 # third party clis
 brew "ykman"
@@ -40,6 +46,7 @@ brew "aws-vault"
 brew "pulumi/tap/esc"
 brew "pulumi/tap/pulumi"
 brew "wireshark"
+brew "k6"
 
 # other?
 brew "openssl@3"
@@ -85,6 +92,7 @@ cask "betterdisplay"
 cask "logi-options+"
 cask "logitune"
 cask "gcloud-cli"
+cask "mitmproxy"
 
 
 # vscode
@@ -93,8 +101,8 @@ cask "gcloud-cli"
 vscode "pkief.material-icon-theme"
 vscode "zhuangtongfa.material-theme"
 ## intellisense and ai
-vscode "github.copilot"
 vscode "github.copilot-chat"
+vscode "anthropic.claude-code"
 ## other
 vscode "vscodevim.vim"
 vscode "eamodio.gitlens"
@@ -105,6 +113,7 @@ vscode "mikestead.dotenv"
 vscode "tamasfe.even-better-toml"
 vscode "bierner.markdown-mermaid"
 vscode "github.vscode-github-actions"
+vscode "bbenoist.nix"
 ## containers
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
@@ -126,8 +135,17 @@ vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.cpptools"
+vscode "ms-vscode.cpp-devtools"
 # rust
 vscode "rust-lang.rust-analyzer"
+# java
+vscode "redhat.java"
+vscode "vscjava.vscode-gradle"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-maven"
 ## remote extension pack
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
