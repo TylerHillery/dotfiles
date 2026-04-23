@@ -27,7 +27,7 @@
   "scm.defaultViewMode": "tree",
   "diffEditor.ignoreTrimWhitespace": false,
   "git.openRepositoryInParentFolders": "always",
-  "diffEditor.renderSideBySide": true,
+  "diffEditor.renderSideBySide": false,
   // zen mode settings
   "zenMode.hideLineNumbers": false,
   // make vs code less busy
@@ -80,8 +80,6 @@
   // language specific stuff
   "python.terminal.activateEnvironment": false,
   "python.languageServer": "None",
-  "ty.inlayHints.callArgumentNames": false,
-  "ty.inlayHints.variableTypes": false,
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
@@ -90,6 +88,9 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -118,6 +119,7 @@
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.plusFeatures.enabled": false,
+  "gitlens.rebaseEditor.openOnPausedRebase": false,
   // for dbt power user
   "dbt.enableNewLineagePanel": true,
   // ai stuff
@@ -128,5 +130,6 @@
   "github.copilot.enable": { "*": false },
   "github.copilot.nextEditSuggestions.enabled": false,
   // other
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "chat.viewSessions.orientation": "stacked"
 }

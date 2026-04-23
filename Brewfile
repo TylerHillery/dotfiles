@@ -32,6 +32,10 @@ brew "direnv"
 brew "wireshark"
 brew "k6"
 brew "kind"
+brew "minikube"
+brew "clang-format"
+brew "just"
+brew "scrcpy"
 
 # dbs
 brew "duckdb"
@@ -62,6 +66,7 @@ brew "pkgconf"
 brew "gnupg"
 brew "mas"
 brew "flock"
+brew "ccache"
 
 # casks
 cask "git-credential-manager"
@@ -91,10 +96,10 @@ cask "slack"
 cask "discord"
 cask "spotify"
 cask "betterdisplay"
-cask "logi-options+"
-cask "logitune"
+cask "linearmouse"
 cask "gcloud-cli"
 cask "mitmproxy"
+cask "android-platform-tools"
 
 
 # vscode
@@ -138,6 +143,7 @@ vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpp-devtools"
+vscode "xaver.clang-format"
 # rust
 vscode "rust-lang.rust-analyzer"
 # java
