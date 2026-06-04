@@ -39,6 +39,12 @@ $(XDG_CONFIG_HOME)/mise/config.toml:
 
 mise: $(XDG_CONFIG_HOME)/mise/config.toml
 
+$(XDG_CONFIG_HOME)/atuin/config.toml:
+	mkdir -p $(XDG_CONFIG_HOME)/atuin
+	ln -sf $(DOTFILE_PATH)/atuin_config.toml $(XDG_CONFIG_HOME)/atuin/config.toml
+
+atuin: $(XDG_CONFIG_HOME)/atuin/config.toml
+
 install:
 	./install.sh
 
@@ -59,4 +65,4 @@ brew-reconcile:
 	@echo "To clean up the temporary file:"
 	@echo "  rm Brewfile.current"
 
-all: install git zsh tmux oh-my-zsh ghostty vscode mise
+all: install git zsh tmux oh-my-zsh ghostty vscode mise atuin

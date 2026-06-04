@@ -80,6 +80,7 @@
   // language specific stuff
   "python.terminal.activateEnvironment": false,
   "python.languageServer": "None",
+  "ty.inlayHints.variableTypes": true,
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
@@ -112,13 +113,14 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true
   },
+   "clang-format.executable": "/opt/homebrew/bin/clang-format",
   // extension settings
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   // gitlens,
-  "gitlens.codeLens.recentChange.enabled": false,
-  "gitlens.codeLens.authors.enabled": false,
-  "gitlens.currentLine.enabled": false,
-  "gitlens.plusFeatures.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": true,
+  "gitlens.codeLens.authors.enabled": true,
+  "gitlens.currentLine.enabled": true,
+  "gitlens.plusFeatures.enabled": true,
   "gitlens.rebaseEditor.openOnPausedRebase": false,
   // for dbt power user
   "dbt.enableNewLineagePanel": true,
