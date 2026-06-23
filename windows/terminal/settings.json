@@ -21,6 +21,14 @@
         {
             "command": 
             {
+                "action": "moveFocus",
+                "direction": "previousInOrder"
+            },
+            "id": "User.moveFocus.787314EB"
+        },
+        {
+            "command": 
+            {
                 "action": "resizePane",
                 "direction": "up"
             },
@@ -49,6 +57,14 @@
                 "direction": "left"
             },
             "id": "User.moveFocus.2A0DA8E0"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "nextInOrder"
+            },
+            "id": "User.moveFocus.D7681B66"
         }
     ],
     "copyFormatting": "none",
@@ -63,35 +79,35 @@
             "keys": "ctrl+t"
         },
         {
-            "id": null,
-            "keys": "ctrl+shift+w"
-        },
-        {
             "id": "Terminal.PasteFromClipboard",
             "keys": "ctrl+v"
         },
         {
             "id": null,
-            "keys": "alt+down"
+            "keys": "ctrl+shift+w"
         },
         {
             "id": null,
             "keys": "ctrl+shift+t"
         },
         {
+            "id": null,
+            "keys": "alt+down"
+        },
+        {
             "id": "User.splitPane.864CD510",
             "keys": "alt+d"
+        },
+        {
+            "id": "User.moveFocus.D7681B66",
+            "keys": "alt+]"
         },
         {
             "id": "Terminal.MoveFocusLeft",
             "keys": "alt+h"
         },
         {
-            "id": "User.moveFocus.87C324ED",
-            "keys": "alt+]"
-        },
-        {
-            "id": "User.moveFocus.2A0DA8E0",
+            "id": "User.moveFocus.787314EB",
             "keys": "alt+["
         },
         {
