@@ -51,6 +51,10 @@
             "id": "User.moveFocus.87C324ED"
         },
         {
+            "command": "duplicateTab",
+            "id": "User.duplicateTab"
+        },
+        {
             "command": 
             {
                 "action": "moveFocus",
@@ -75,8 +79,12 @@
     "keybindings": 
     [
         {
-            "id": "Terminal.OpenNewTab",
+            "id": "User.duplicateTab",
             "keys": "ctrl+t"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+w"
         },
         {
             "id": "Terminal.PasteFromClipboard",
@@ -84,27 +92,23 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+w"
+            "keys": "alt+down"
         },
         {
             "id": null,
             "keys": "ctrl+shift+t"
         },
         {
-            "id": null,
-            "keys": "alt+down"
-        },
-        {
             "id": "User.splitPane.864CD510",
             "keys": "alt+d"
         },
         {
-            "id": "User.moveFocus.D7681B66",
-            "keys": "alt+]"
-        },
-        {
             "id": "Terminal.MoveFocusLeft",
             "keys": "alt+h"
+        },
+        {
+            "id": "User.moveFocus.D7681B66",
+            "keys": "alt+]"
         },
         {
             "id": "User.moveFocus.787314EB",
@@ -174,7 +178,19 @@
     "newTabMenu": 
     [
         {
-            "type": "remainingProfiles"
+            "icon": null,
+            "profile": "{99232d66-401e-4a96-b953-fa50073529bf}",
+            "type": "profile"
+        },
+        {
+            "icon": null,
+            "profile": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
+            "type": "profile"
+        },
+        {
+            "icon": null,
+            "profile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+            "type": "profile"
         }
     ],
     "newTabPosition": "afterCurrentTab",
@@ -192,6 +208,25 @@
         "list": 
         [
             {
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+                "guid": "{99232d66-401e-4a96-b953-fa50073529bf}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash",
+                "startingDirectory": "%USERPROFILE%",
+                "tabTitle": "Git Bash"
+            },
+            {
+                "font": 
+                {
+                    "face": "JetBrainsMono Nerd Font"
+                },
+                "guid": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Microsoft.WSL"
+            },
+            {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
@@ -208,25 +243,6 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "font": 
-                {
-                    "face": "JetBrainsMono Nerd Font"
-                },
-                "guid": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "Microsoft.WSL"
-            },
-            {
-                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
-                "guid": "{99232d66-401e-4a96-b953-fa50073529bf}",
-                "hidden": false,
-                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
-                "name": "Git Bash",
-                "startingDirectory": "%USERPROFILE%",
-                "tabTitle": "Git Bash"
             }
         ]
     },

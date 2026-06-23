@@ -1,0 +1,86 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/PowerShell/DSC/main/schemas/2023/08/config/document.json
+
+$schema: https://raw.githubusercontent.com/PowerShell/DSC/main/schemas/2023/08/config/document.json
+metadata:
+  winget:
+    processor: dscv3
+resources:
+  - name: Chrome
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Google.Chrome
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: PowerToys
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Microsoft.PowerToys
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: WindowsAppRuntime
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Microsoft.WindowsAppRuntime.2.0
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: Git
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Git.Git
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: VSCode
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Microsoft.VisualStudioCode
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: WindowsTerminal
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Microsoft.WindowsTerminal
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: WSL
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Microsoft.WSL
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: Mise
+    type: Microsoft.WinGet/Package
+    properties:
+      id: jdx.mise
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: Make
+    type: Microsoft.WinGet/Package
+    properties:
+      id: ezwinports.make
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: Atuin
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Atuinsh.Atuin
+      source: winget
+      acceptAgreements: true
+      useLatest: true
