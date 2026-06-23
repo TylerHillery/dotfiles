@@ -1,2 +1,4 @@
 .env
 zsh.d/private.sh
+windows/apps-winget.current.txt
+windows/winget-export.current.json

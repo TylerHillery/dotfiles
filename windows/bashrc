@@ -1,0 +1,66 @@
+##############
+# INTERACTIVE
+##############
+
+case $- in
+  *i*) ;;
+  *) return ;;
+esac
+
+##############
+# PROMPT
+##############
+
+prompt_git_branch() {
+  local branch
+  branch="$(git branch --show-current 2>/dev/null)" || return
+  if [ -n "$branch" ]; then
+    printf ' git:(\001\e[31m\002%s\001\e[34m\002)' "$branch"
+  fi
+}
+
+prompt_parent_current_dir() {
+  local current parent
+  current="${PWD##*/}"
+  parent="${PWD%/*}"
+  parent="${parent##*/}"
+
+  if [ -n "$parent" ] && [ "$parent" != "$current" ]; then
+    printf '%s/%s' "$parent" "$current"
+  else
+    printf '%s' "$current"
+  fi
+}
+
+PS1='\[\e[32m\]$(prompt_parent_current_dir)\[\e[0m\]\[\e[34m\]$(prompt_git_branch)\[\e[0m\]
+\[\e[32;1m\]➜ \[\e[0m\]'
+
+##############
+# HISTORY
+##############
+
+if [ -f "$HOME/.bash-preexec.sh" ]; then
+  source "$HOME/.bash-preexec.sh"
+fi
+
+if command -v atuin >/dev/null 2>&1; then
+  eval "$(atuin init bash)"
+fi
+
+#########
+# env 
+#########
+
+# general
+export PATH="$HOME/AppData/Local/mise/shims:$PATH"
+export USER="${USER:-$(id -un 2>/dev/null || printf '%s' "${USERNAME:-Tyler}")}"
+export LANG="${LANG:-en_US.UTF-8}"
+export TERM=xterm-256color
+
+
+##############
+# MISC
+##############
+
+# Disable Git Bash's visible cursor blink.
+printf '\e[?12l'

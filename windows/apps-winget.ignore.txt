@@ -1,0 +1,12 @@
+Microsoft.AppInstaller
+Microsoft.DotNet.Native.Runtime
+Microsoft.Edge
+Microsoft.UI.Xaml.2.8
+Microsoft.VCLibs.14
+Microsoft.VCLibs.Desktop.14
+Microsoft.VCRedist.2015+.x64
+Microsoft.VCRedist.2015+.x86
+Microsoft.WindowsAppRuntime.1.5
+Microsoft.WindowsAppRuntime.1.7
+Microsoft.WindowsAppRuntime.1.8
+Microsoft.WindowsAppRuntime.2.0

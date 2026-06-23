@@ -1,0 +1,10 @@
+Google.Chrome
+Microsoft.PowerToys
+Microsoft.WindowsAppRuntime.2.0
+Git.Git
+Microsoft.VisualStudioCode
+Microsoft.WindowsTerminal
+Microsoft.WSL
+jdx.mise
+ezwinports.make
+Atuinsh.Atuin

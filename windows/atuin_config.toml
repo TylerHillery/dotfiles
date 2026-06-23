@@ -1,0 +1,18 @@
+enter_accept = true
+filter_mode = "host"
+keymap_mode = "vim-insert"
+prefers_reduced_motion = true
+search_mode = "fuzzy"
+
+[sync]
+records = true
+
+[daemon]
+enabled = false
+autostart = false
+
+[ui]
+columns = ["duration", "command"]
+
+[ai]
+enabled = true
