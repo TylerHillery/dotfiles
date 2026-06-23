@@ -19,4 +19,13 @@ prune-apply:
 register-backup-task:
 	powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./register-backup-task.ps1
 
+task-list:
+	powershell.exe -NoProfile -Command "Get-ScheduledTask -TaskName '*Dotfiles*' | Format-List TaskName, State, LastRunTime, LastTaskResult"
+
+task-info:
+	powershell.exe -NoProfile -Command "Get-ScheduledTask -TaskName 'Dotfiles Windows Backup' | Get-ScheduledTaskInfo"
+
+task-logs:
+	powershell.exe -NoProfile -Command "Get-WinEvent -LogName 'Microsoft-Windows-TaskScheduler/Operational' -MaxEvents 20 | Where-Object { \$$_.Properties -match 'Dotfiles Windows Backup' } | Select-Object TimeCreated, Id, Message | Format-Table -AutoSize"
+
 all: install
