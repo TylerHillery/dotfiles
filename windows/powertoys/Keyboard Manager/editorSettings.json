@@ -854,6 +854,82 @@
       },
       "Profiles": [],
       "IsActive": true
+    },
+    "0a3134f6-e4b2-4caf-8631-4dda4913aba3": {
+      "Id": "0a3134f6-e4b2-4caf-8631-4dda4913aba3",
+      "Shortcut": {
+        "OriginalKeys": "164;160;78",
+        "TargetKeys": "162;160;78",
+        "TargetApp": "",
+        "OperationType": 0,
+        "TargetText": "",
+        "ProgramPath": "",
+        "ProgramArgs": "",
+        "StartInDirectory": "",
+        "Elevation": 0,
+        "IfRunningAction": 0,
+        "Visibility": 0,
+        "UriToOpen": ""
+      },
+      "Profiles": [],
+      "IsActive": true
+    },
+    "e77f023e-2527-4d53-a4bc-4e828e6803ed": {
+      "Id": "e77f023e-2527-4d53-a4bc-4e828e6803ed",
+      "Shortcut": {
+        "OriginalKeys": "164;79",
+        "TargetKeys": "162;79",
+        "TargetApp": "",
+        "OperationType": 0,
+        "TargetText": "",
+        "ProgramPath": "",
+        "ProgramArgs": "",
+        "StartInDirectory": "",
+        "Elevation": 0,
+        "IfRunningAction": 0,
+        "Visibility": 0,
+        "UriToOpen": ""
+      },
+      "Profiles": [],
+      "IsActive": true
+    },
+    "de4de9b8-12f2-43f4-a6fd-08fc83ce37dc": {
+      "Id": "de4de9b8-12f2-43f4-a6fd-08fc83ce37dc",
+      "Shortcut": {
+        "OriginalKeys": "91;67",
+        "TargetKeys": "164;67",
+        "TargetApp": "",
+        "OperationType": 0,
+        "TargetText": "",
+        "ProgramPath": "",
+        "ProgramArgs": "",
+        "StartInDirectory": "",
+        "Elevation": 0,
+        "IfRunningAction": 0,
+        "Visibility": 0,
+        "UriToOpen": ""
+      },
+      "Profiles": [],
+      "IsActive": true
+    },
+    "4879baa5-5cba-42d0-b511-8c70029551c8": {
+      "Id": "4879baa5-5cba-42d0-b511-8c70029551c8",
+      "Shortcut": {
+        "OriginalKeys": "91;82",
+        "TargetKeys": "164;82",
+        "TargetApp": "",
+        "OperationType": 0,
+        "TargetText": "",
+        "ProgramPath": "",
+        "ProgramArgs": "",
+        "StartInDirectory": "",
+        "Elevation": 0,
+        "IfRunningAction": 0,
+        "Visibility": 0,
+        "UriToOpen": ""
+      },
+      "Profiles": [],
+      "IsActive": true
     }
   },
   "ProfileDictionary": {},
@@ -903,7 +979,11 @@
       "66bae2ab-a8e0-4961-a83d-998713ecc7b8",
       "b774bc00-d652-444a-b989-0ba395f0a644",
       "2c6ffadd-e67b-44a4-814f-c36d15ab127f",
-      "5fea4049-0993-4bc7-84b3-8b048d82a47c"
+      "5fea4049-0993-4bc7-84b3-8b048d82a47c",
+      "0a3134f6-e4b2-4caf-8631-4dda4913aba3",
+      "e77f023e-2527-4d53-a4bc-4e828e6803ed",
+      "de4de9b8-12f2-43f4-a6fd-08fc83ce37dc",
+      "4879baa5-5cba-42d0-b511-8c70029551c8"
     ]
   },
   "ActiveProfile": ""
