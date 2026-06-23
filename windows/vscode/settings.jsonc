@@ -157,5 +157,7 @@
   "terminal.integrated.commandsToSkipShell": [
     "workbench.action.quickOpen",
     "workbench.action.toggleSidebarVisibility",
+    "workbench.action.terminal.focusNext",
+    "workbench.action.terminal.focusPrevious",
   ],
 }

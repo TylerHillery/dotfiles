@@ -84,13 +84,23 @@
   },
   {
     "key": "ctrl+tab",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus",
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus",
+  },
+  {
+    "key": "ctrl+tab",
     "command": "workbench.action.nextEditor",
-    "when": "!activeEditorGroupEmpty",
+    "when": "!terminalFocus && !activeEditorGroupEmpty",
   },
   {
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditor",
-    "when": "!activeEditorGroupEmpty",
+    "when": "!terminalFocus && !activeEditorGroupEmpty",
   },
   {
     "key": "ctrl+tab",
@@ -146,5 +156,25 @@
   {
     "key": "ctrl+p",
     "command": "-workbench.action.quickOpen",
+  },
+  {
+    "key": "alt+[",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalHasBeenCreated && terminalSplitPaneActive || terminalFocus && terminalProcessSupported && terminalSplitPaneActive",
+  },
+  {
+    "key": "alt+up",
+    "command": "-workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalHasBeenCreated && terminalSplitPaneActive || terminalFocus && terminalProcessSupported && terminalSplitPaneActive",
+  },
+  {
+    "key": "alt+]",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalHasBeenCreated && terminalSplitPaneActive || terminalFocus && terminalProcessSupported && terminalSplitPaneActive",
+  },
+  {
+    "key": "alt+down",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalHasBeenCreated && terminalSplitPaneActive || terminalFocus && terminalProcessSupported && terminalSplitPaneActive",
   },
 ]
