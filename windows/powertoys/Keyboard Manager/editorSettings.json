@@ -816,6 +816,25 @@
       },
       "Profiles": [],
       "IsActive": true
+    },
+    "2c6ffadd-e67b-44a4-814f-c36d15ab127f": {
+      "Id": "2c6ffadd-e67b-44a4-814f-c36d15ab127f",
+      "Shortcut": {
+        "OriginalKeys": "164;13",
+        "TargetKeys": "162;13",
+        "TargetApp": "",
+        "OperationType": 0,
+        "TargetText": "",
+        "ProgramPath": "",
+        "ProgramArgs": "",
+        "StartInDirectory": "",
+        "Elevation": 0,
+        "IfRunningAction": 0,
+        "Visibility": 0,
+        "UriToOpen": ""
+      },
+      "Profiles": [],
+      "IsActive": true
     }
   },
   "ProfileDictionary": {},
@@ -863,7 +882,8 @@
       "1a915eae-201a-4ed8-a85c-71789dd32031",
       "515907f0-4baa-492d-bc1f-285534c9b52d",
       "66bae2ab-a8e0-4961-a83d-998713ecc7b8",
-      "b774bc00-d652-444a-b989-0ba395f0a644"
+      "b774bc00-d652-444a-b989-0ba395f0a644",
+      "2c6ffadd-e67b-44a4-814f-c36d15ab127f"
     ]
   },
   "ActiveProfile": ""
