@@ -41,6 +41,35 @@ foreach ($file in $files) {
     }
 }
 
+$trackedWslConfig = Join-Path $PSScriptRoot "wslconfig"
+if (Test-Path -LiteralPath $trackedWslConfig) {
+    $liveWslConfig = "$env:USERPROFILE\.wslconfig"
+    if (Test-Path -LiteralPath $liveWslConfig) {
+        "OK: $liveWslConfig"
+    } else {
+        "MISSING: $liveWslConfig"
+        $missing += $liveWslConfig
+    }
+}
+
+$wslRoot = Join-Path $PSScriptRoot "wsl"
+if (Test-Path -LiteralPath $wslRoot) {
+    Get-ChildItem -LiteralPath $wslRoot -Directory | ForEach-Object {
+        $distro = $_.Name
+        $expected = Join-Path $_.FullName "wsl.conf"
+
+        if ((Test-Path -LiteralPath $expected) -and (Get-Command wsl.exe -ErrorAction SilentlyContinue)) {
+            wsl.exe -d $distro -- test -f /etc/wsl.conf
+            if ($LASTEXITCODE -eq 0) {
+                "OK: WSL $distro /etc/wsl.conf"
+            } else {
+                "MISSING: WSL $distro /etc/wsl.conf"
+                $missing += "WSL $distro /etc/wsl.conf"
+            }
+        }
+    }
+}
+
 $appsFile = Join-Path $PSScriptRoot "apps-winget.txt"
 $packagesConfig = Join-Path $PSScriptRoot "packages.winget"
 

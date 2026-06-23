@@ -136,6 +136,23 @@ Or:
 
 Close and reopen Git Bash, Windows Terminal, VS Code, and PowerToys after restoring.
 
+WSL has two config locations:
+
+- `%USERPROFILE%\.wslconfig`: Windows-side global WSL VM settings. This is backed up/restored as `windows/wslconfig` if it exists.
+- `/etc/wsl.conf`: per-distro Linux-side settings. These are backed up under `windows/wsl/<distro>/wsl.conf`.
+
+Restoring per-distro WSL config writes to `/etc/wsl.conf` with `sudo`, so it is explicit:
+
+```bash
+make restore-wsl
+```
+
+Restart WSL after changing either config:
+
+```powershell
+wsl --shutdown
+```
+
 ## Tracked settings
 
 - `windows/packages.winget`: declarative package config used by `winget configure`
@@ -148,6 +165,8 @@ Close and reopen Git Bash, Windows Terminal, VS Code, and PowerToys after restor
 - `windows/bash_profile`: Git Bash login config, restored to `~/.bash_profile`
 - `windows/inputrc`: Git Bash/readline config, restored to `~/.inputrc`
 - `windows/gitconfig`: Git config, restored to `~/.gitconfig`
+- `windows/wslconfig`: optional global WSL config, restored to `~/.wslconfig`
+- `windows/wsl/<distro>/wsl.conf`: optional per-distro WSL config, restored to `/etc/wsl.conf` with `make restore-wsl`
 - `windows/powershell_profile.ps1`: PowerShell profile, restored to `~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1`
 - `windows/mise_config.toml`: mise global tool config, restored to `%LOCALAPPDATA%\mise\config\config.toml`
 - `windows/atuin_config.toml`: Atuin config, restored to `~/.config/atuin/config.toml`
@@ -165,6 +184,7 @@ Close and reopen Git Bash, Windows Terminal, VS Code, and PowerToys after restor
 make install
 make backup
 make restore
+make restore-wsl
 make packages
 make refresh-path
 make verify

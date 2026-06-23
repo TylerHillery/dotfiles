@@ -7,6 +7,9 @@ backup:
 restore:
 	powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./restore.ps1
 
+restore-wsl:
+	powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./restore.ps1 -RestoreWslDistroConfig
+
 reconcile:
 	powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./reconcile-winget.ps1
 

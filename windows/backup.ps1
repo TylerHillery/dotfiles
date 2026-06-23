@@ -24,6 +24,7 @@ Copy-IfExists "$env:USERPROFILE\.bashrc" "$PSScriptRoot\bashrc"
 Copy-IfExists "$env:USERPROFILE\.bash_profile" "$PSScriptRoot\bash_profile"
 Copy-IfExists "$env:USERPROFILE\.inputrc" "$PSScriptRoot\inputrc"
 Copy-IfExists "$env:USERPROFILE\.gitconfig" "$PSScriptRoot\gitconfig"
+Copy-IfExists "$env:USERPROFILE\.wslconfig" "$PSScriptRoot\wslconfig"
 Copy-IfExists $PowerShellProfile "$PSScriptRoot\powershell_profile.ps1"
 Copy-IfExists "$env:LOCALAPPDATA\mise\config\config.toml" "$PSScriptRoot\mise_config.toml"
 Copy-IfExists "$env:USERPROFILE\.config\atuin\config.toml" "$PSScriptRoot\atuin_config.toml"
@@ -34,6 +35,30 @@ Copy-IfExists "$env:LOCALAPPDATA\Microsoft\PowerToys\settings.json" "$PSScriptRo
 Copy-IfExists "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\settings.json" "$PSScriptRoot\powertoys\Keyboard Manager\settings.json"
 Copy-IfExists "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\default.json" "$PSScriptRoot\powertoys\Keyboard Manager\default.json"
 Copy-IfExists "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\editorSettings.json" "$PSScriptRoot\powertoys\Keyboard Manager\editorSettings.json"
+
+if (Get-Command wsl.exe -ErrorAction SilentlyContinue) {
+    $distros = @(wsl.exe --list --quiet |
+        ForEach-Object { ($_ -replace "`0", "").Trim() } |
+        Where-Object { $_ })
+
+    foreach ($distro in $distros) {
+        $destination = Join-Path $PSScriptRoot "wsl\$distro\wsl.conf"
+        $parent = Split-Path -Parent $destination
+        if (-not (Test-Path -LiteralPath $parent)) {
+            New-Item -ItemType Directory -Path $parent | Out-Null
+        }
+
+        $content = wsl.exe -d $distro -- sh -lc "if [ -f /etc/wsl.conf ]; then cat /etc/wsl.conf; fi"
+        if ($LASTEXITCODE -eq 0 -and $content) {
+            $content | Set-Content -LiteralPath $destination
+            "Backed up WSL distro config for $distro"
+        } else {
+            "Skipped missing WSL distro config for $distro"
+        }
+    }
+} else {
+    "Skipped WSL distro configs because wsl.exe is not on PATH"
+}
 
 if (Get-Command winget -ErrorAction SilentlyContinue) {
     winget export --output "$PSScriptRoot\winget-export.json" --source winget --accept-source-agreements | Out-Null
