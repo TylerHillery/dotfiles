@@ -18,3 +18,7 @@
 [tasks.bootstrap]
 description = "Run idempotent Windows setup and GUI app installs"
 run = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File windows/bootstrap.ps1"
+
+[tasks."bootstrap:nvim"]
+description = "Install Windows Neovim config if missing"
+run = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File windows/scripts/install-neovim-config.ps1"
