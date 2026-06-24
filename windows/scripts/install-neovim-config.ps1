@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 $nvimConfigDir = Join-Path $env:LOCALAPPDATA "nvim"
 $nvimGitDir = Join-Path $nvimConfigDir ".git"
-$nvimConfigBranch = "mac"
+$nvimConfigBranch = "windows"
 
 if (Test-Path -LiteralPath $nvimGitDir) {
     "Neovim config already installed"
