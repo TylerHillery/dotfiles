@@ -61,6 +61,14 @@ resources:
       acceptAgreements: true
       useLatest: true
 
+  - name: Tailscale
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Tailscale.Tailscale
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
   - name: JetBrainsMonoNerdFont
     type: Microsoft.WinGet/Package
     properties:
