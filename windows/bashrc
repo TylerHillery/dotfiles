@@ -86,9 +86,9 @@ for _atuin_dir in "$HOME"/AppData/Local/mise/installs/atuin/*; do
 done
 
 if [ -n "$_atuin_bin" ]; then
-  eval "$("$_atuin_bin" init bash)"
+  eval "$("$_atuin_bin" init bash --disable-up-arrow)"
 elif command -v atuin >/dev/null 2>&1; then
-  eval "$(atuin init bash)"
+  eval "$(atuin init bash --disable-up-arrow)"
 fi
 
 
