@@ -1,3 +1,6 @@
+[tools]
+claude-code = "latest"
+
 [bootstrap.packages]
 # core
 "brew:git" = "latest"
