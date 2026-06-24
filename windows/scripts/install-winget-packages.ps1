@@ -17,10 +17,12 @@ if (Get-Command winget -ErrorAction SilentlyContinue) {
         $settings | Add-Member -NotePropertyName experimentalFeatures -NotePropertyValue ([pscustomobject]@{})
     }
 
-    if (Get-Member -InputObject $settings.experimentalFeatures -Name configuration -MemberType NoteProperty) {
-        $settings.experimentalFeatures.configuration = $true
-    } else {
-        $settings.experimentalFeatures | Add-Member -NotePropertyName configuration -NotePropertyValue $true
+    foreach ($feature in @("configuration", "configuration03")) {
+        if (Get-Member -InputObject $settings.experimentalFeatures -Name $feature -MemberType NoteProperty) {
+            $settings.experimentalFeatures.$feature = $true
+        } else {
+            $settings.experimentalFeatures | Add-Member -NotePropertyName $feature -NotePropertyValue $true
+        }
     }
 
     $settings | ConvertTo-Json -Depth 10 | Set-Content $wingetSettings
