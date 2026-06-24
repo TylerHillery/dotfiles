@@ -1,0 +1,10 @@
+[profile tyler-dev]
+region = us-west-2
+sso_session = tylerhillery-sso
+sso_account_id = 746669212750
+sso_role_name = AdministratorAccess
+
+[sso-session tylerhillery-sso]
+sso_start_url = https://tylerhillery.awsapps.com/start
+sso_region = us-east-1
+sso_registration_scopes = sso:account:access

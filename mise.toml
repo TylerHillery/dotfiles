@@ -36,7 +36,7 @@ duckdb = "latest"
 # Vendor CLIs
 gh = "latest"
 pulumi = "latest"
-aws-cli = "latest"
+aws-cli = { version = "latest", os = ["linux"] }
 gcloud = { version = "latest", os = ["linux", "macos"] }
 
 

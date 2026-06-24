@@ -19,6 +19,7 @@ run = "sudo apt-get update && sudo apt-get upgrade -y"
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
 "~/.config/mise/config.linux.toml" = { source = "mise.linux.toml", mode = "symlink" }
 "~/.gitconfig" = { source = "linux/gitconfig", mode = "symlink" }
+"~/.aws/config" = { source = "shared/aws/config", mode = "symlink" }
 "~/.zshrc" = { source = "linux/zshrc", mode = "symlink" }
 "~/.tmux.conf" = { source = "linux/tmux.conf", mode = "symlink" }
 "~/.config/atuin/config.toml" = { source = "linux/atuin_config.toml", mode = "symlink" }
