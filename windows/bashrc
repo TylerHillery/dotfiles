@@ -7,6 +7,12 @@ case $- in
   *) return ;;
 esac
 
+# Prevent duplicate initialization when bashrc is sourced multiple times.
+if [ -n "${TYLER_BASHRC_LOADED:-}" ]; then
+  return
+fi
+export TYLER_BASHRC_LOADED=1
+
 ##############
 # PROMPT
 ##############
@@ -45,6 +51,25 @@ prompt_parent_current_dir() {
 PS1='\[\e[32m\]$(prompt_parent_current_dir)\[\e[0m\]\[\e[34m\]$(prompt_git_branch)\[\e[0m\]
 \[\e[32;1m\]➜ \[\e[0m\]'
 
+#########
+# env
+#########
+
+# Prefer the real WinGet package binary over the WinGet Links shim,
+# which can fail under Git Bash/MSYS with "untrusted mount point" errors.
+for _mise_bin_dir in "$HOME"/AppData/Local/Microsoft/WinGet/Packages/jdx.mise_*/mise/bin; do
+  if [ -x "$_mise_bin_dir/mise.exe" ]; then
+    export PATH="$_mise_bin_dir:$PATH"
+    break
+  fi
+done
+
+# general
+export PATH="$HOME/AppData/Local/mise/shims:$PATH"
+export USER="${USER:-$(id -un 2>/dev/null || printf '%s' "${USERNAME:-Tyler}")}"
+export LANG="${LANG:-en_US.UTF-8}"
+export TERM=xterm-256color
+
 ##############
 # HISTORY
 ##############
@@ -53,19 +78,18 @@ if [ -f "$HOME/.bash-preexec.sh" ]; then
   source "$HOME/.bash-preexec.sh"
 fi
 
-if command -v atuin >/dev/null 2>&1; then
+_atuin_bin=""
+for _atuin_dir in "$HOME"/AppData/Local/mise/installs/atuin/*; do
+  if [ -x "$_atuin_dir/atuin.exe" ]; then
+    _atuin_bin="$_atuin_dir/atuin.exe"
+  fi
+done
+
+if [ -n "$_atuin_bin" ]; then
+  eval "$("$_atuin_bin" init bash)"
+elif command -v atuin >/dev/null 2>&1; then
   eval "$(atuin init bash)"
 fi
-
-#########
-# env
-#########
-
-# general
-export PATH="$HOME/AppData/Local/mise/shims:$PATH"
-export USER="${USER:-$(id -un 2>/dev/null || printf '%s' "${USERNAME:-Tyler}")}"
-export LANG="${LANG:-en_US.UTF-8}"
-export TERM=xterm-256color
 
 
 ##############
