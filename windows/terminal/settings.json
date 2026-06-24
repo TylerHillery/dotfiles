@@ -66,7 +66,7 @@
   ],
   "copyFormatting": "none",
   "copyOnSelect": true,
-  "defaultProfile": "{99232d66-401e-4a96-b953-fa50073529bf}",
+  "defaultProfile": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
   "disableAnimations": true,
   "firstWindowPreference": "persistedWindowLayout",
   "keybindings": [
@@ -170,12 +170,12 @@
   "newTabMenu": [
     {
       "icon": null,
-      "profile": "{99232d66-401e-4a96-b953-fa50073529bf}",
+      "profile": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
       "type": "profile"
     },
     {
       "icon": null,
-      "profile": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
+      "profile": "{99232d66-401e-4a96-b953-fa50073529bf}",
       "type": "profile"
     },
     {
@@ -195,6 +195,12 @@
     },
     "list": [
       {
+        "guid": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "source": "Microsoft.WSL"
+      },
+      {
         "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
         "guid": "{99232d66-401e-4a96-b953-fa50073529bf}",
         "hidden": false,
@@ -202,15 +208,6 @@
         "name": "Git Bash",
         "startingDirectory": "%USERPROFILE%",
         "tabTitle": "Git Bash"
-      },
-      {
-        "font": {
-          "face": "JetBrainsMono Nerd Font"
-        },
-        "guid": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
-        "hidden": false,
-        "name": "Ubuntu",
-        "source": "Microsoft.WSL"
       },
       {
         "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
