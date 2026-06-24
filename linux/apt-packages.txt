@@ -1,0 +1,24 @@
+# core 
+zsh
+git
+make
+jq
+tree
+curl
+wget
+ca-certificates
+build-essential
+
+# faster utils
+fd-find
+fzf
+ripgrep
+
+# my utils
+neovim
+ffmpeg
+btop
+mise
+hyperfine
+clang-format
+just

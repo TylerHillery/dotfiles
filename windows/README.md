@@ -16,79 +16,49 @@ Or run PowerShell from the repo root:
 .\windows\install.ps1
 ```
 
-The script applies `windows/packages.winget` with `winget configure`, refreshes PATH, restores tracked settings, installs tools from `windows/mise_config.toml`, installs `opencode-ai` with npm when npm is available, then runs `windows/verify.ps1`.
-
-If `winget configure` is unavailable, the script falls back to installing packages from `windows/apps-winget.txt`.
+The script installs missing packages from `windows/apps-winget.txt`, refreshes PATH, symlinks tracked settings, installs tools from `windows/mise_config.toml`, installs `opencode-ai` with npm when npm is available, then runs `windows/verify.ps1`.
 
 Git Bash initializes Atuin for `Ctrl+R` search and sources `~/.bash-preexec.sh` before Atuin so Bash history can be recorded. Atuin daemon mode is disabled in `windows/atuin_config.toml` because it caused command hangs on this machine.
 
-## Backup current machine state
+## Link tracked settings
 
-After changing Windows Terminal, VS Code, PowerToys, `.bashrc`, or `.inputrc`, run from Git Bash in `windows/`:
+Windows settings are symlinked into their live locations. Changes made by apps or by editing files in this repo update the same files.
 
-```bash
-make backup
-```
-
-Or run PowerShell from the repo root:
-
-```powershell
-.\windows\backup.ps1
-```
-
-Then review and commit the changed files.
-
-## Automatic backup task
-
-To register a Windows scheduled task that runs `windows/backup.ps1` every 12 hours:
+To relink without reinstalling packages:
 
 ```bash
-make register-backup-task
+make link
 ```
 
 Or:
 
 ```powershell
-.\windows\register-backup-task.ps1
+.\windows\link.ps1
 ```
 
-This only copies live settings into the repo. It does not commit or push changes.
+If a destination already exists and is not a symlink, `link.ps1` moves it aside to a timestamped `.dotfiles-backup-*` path before creating the symlink.
 
-To inspect the backup task from Git Bash:
-
-```bash
-make task-list
-make task-info
-make task-logs
-```
-
-`task-list` shows state, last run, result code, and next run. `task-logs` reads recent Task Scheduler operational events.
+Windows symlink creation requires Developer Mode or an elevated shell.
 
 ## Apply packages only
 
-To apply just the declarative winget package config without restoring settings:
+To install missing winget packages without relinking settings:
 
 ```bash
 make packages
 ```
 
-This runs:
-
-```powershell
-winget configure --file ./packages.winget --accept-configuration-agreements --disable-interactivity
-```
-
-Use this when you only changed `windows/packages.winget` or want to re-apply package state.
+This checks each package in `windows/apps-winget.txt` with `winget list` and skips packages that are already installed.
 
 ## Verify current machine
 
-To check expected commands and restored config files:
+To check expected commands and symlinked config files:
 
 ```bash
 make verify
 ```
 
-This runs `windows/verify.ps1` and checks for `git`, `code`, `atuin`, `mise`, `make`, `winget`, and the main restored config files.
+This runs `windows/verify.ps1` and checks for `git`, `code`, `atuin`, `mise`, `make`, `winget`, and the main symlinked config files.
 
 ## Reconcile winget packages
 
@@ -120,56 +90,36 @@ To uninstall those untracked packages:
 
 Packages in `windows/apps-winget.ignore.txt` are never pruned.
 
-## Restore tracked settings
-
-To apply the repo settings without reinstalling apps:
-
-```bash
-make restore
-```
-
-Or:
-
-```powershell
-.\windows\restore.ps1
-```
-
-Close and reopen Git Bash, Windows Terminal, VS Code, and PowerToys after restoring.
-
 WSL has two config locations:
 
-- `%USERPROFILE%\.wslconfig`: Windows-side global WSL VM settings. This is backed up/restored as `windows/wslconfig` if it exists.
-- `/etc/wsl.conf`: per-distro Linux-side settings. These are backed up under `windows/wsl/<distro>/wsl.conf`.
+- `%USERPROFILE%\.wslconfig`: Windows-side global WSL VM settings. This is symlinked from `windows/wslconfig` if it exists.
+- `/etc/wsl.conf`: per-distro Linux-side settings. This is tracked in `linux/wsl.conf` and applied from inside WSL with `make wsl-conf`.
 
-Restoring per-distro WSL config writes to `/etc/wsl.conf` with `sudo`, so it is explicit:
-
-```bash
-make restore-wsl
-```
-
-Restart WSL after changing either config:
+Restart WSL after changing either WSL config:
 
 ```powershell
 wsl --shutdown
 ```
 
+Linux shell dotfiles live in the top-level `linux/` directory and are managed from that directory inside WSL/Linux.
+
 ## Tracked settings
 
-- `windows/packages.winget`: declarative package config used by `winget configure`
-- `windows/apps-winget.txt`: package list used by reconcile/prune and as fallback when `winget configure` is unavailable
+- `windows/packages.winget`: declarative package config kept in sync with `apps-winget.txt`
+- `windows/apps-winget.txt`: package list used by install/reconcile/prune
 - `windows/apps-winget.ignore.txt`: winget packages ignored during reconcile
 - `windows/invoke-retry.ps1`: retry helper used around flaky install operations
 - `windows/refresh-path.ps1`: refreshes current PowerShell PATH from registry after installs
-- `windows/verify.ps1`: validates expected commands and restored config files
-- `windows/bashrc`: Git Bash startup config, restored to `~/.bashrc`
-- `windows/bash_profile`: Git Bash login config, restored to `~/.bash_profile`
-- `windows/inputrc`: Git Bash/readline config, restored to `~/.inputrc`
-- `windows/gitconfig`: Git config, restored to `~/.gitconfig`
-- `windows/wslconfig`: optional global WSL config, restored to `~/.wslconfig`
-- `windows/wsl/<distro>/wsl.conf`: optional per-distro WSL config, restored to `/etc/wsl.conf` with `make restore-wsl`
-- `windows/powershell_profile.ps1`: PowerShell profile, restored to `~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1`
-- `windows/mise_config.toml`: mise global tool config, restored to `%LOCALAPPDATA%\mise\config\config.toml`
-- `windows/atuin_config.toml`: Atuin config, restored to `~/.config/atuin/config.toml`
+- `windows/link.ps1`: symlinks tracked config files into live locations
+- `windows/verify.ps1`: validates expected commands and symlinked config files
+- `windows/bashrc`: Git Bash startup config, linked to `~/.bashrc`
+- `windows/bash_profile`: Git Bash login config, linked to `~/.bash_profile`
+- `windows/inputrc`: Git Bash/readline config, linked to `~/.inputrc`
+- `windows/gitconfig`: Git config, linked to `~/.gitconfig`
+- `windows/wslconfig`: optional global WSL config, linked to `~/.wslconfig`
+- `windows/powershell_profile.ps1`: PowerShell profile, linked to `~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1`
+- `windows/mise_config.toml`: mise global tool config, linked to `%LOCALAPPDATA%\mise\config\config.toml`
+- `windows/atuin_config.toml`: Atuin config, linked to `~/.config/atuin/config.toml`
 - `windows/vscode/settings.jsonc`: VS Code user settings
 - `windows/vscode/keybindings.jsonc`: VS Code keybindings
 - `windows/vscode/extensions.txt`: VS Code extensions
@@ -182,17 +132,10 @@ wsl --shutdown
 
 ```bash
 make install
-make backup
-make restore
-make restore-wsl
+make link
 make packages
-make refresh-path
 make verify
 make reconcile
 make prune
 make prune-apply
-make register-backup-task
-make task-list
-make task-info
-make task-logs
 ```

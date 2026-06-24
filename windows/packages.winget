@@ -84,3 +84,19 @@ resources:
       source: winget
       acceptAgreements: true
       useLatest: true
+
+  - name: Delta
+    type: Microsoft.WinGet/Package
+    properties:
+      id: dandavison.delta
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: LogitechOptions
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Logitech.Options
+      source: winget
+      acceptAgreements: true
+      useLatest: true

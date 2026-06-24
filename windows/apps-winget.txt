@@ -8,3 +8,5 @@ Microsoft.WSL
 jdx.mise
 ezwinports.make
 Atuinsh.Atuin
+dandavison.delta
+Logitech.Options

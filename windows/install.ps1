@@ -1,55 +1,10 @@
 $ErrorActionPreference = "Stop"
 
-$AppsFile = Join-Path $PSScriptRoot "apps-winget.txt"
-$PackagesConfig = Join-Path $PSScriptRoot "packages.winget"
-
-. (Join-Path $PSScriptRoot "invoke-retry.ps1")
-
-if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
-    throw "winget is required before running this script."
-}
-
-if (Test-Path -LiteralPath $PackagesConfig) {
-    $canConfigure = $false
-
-    winget configure --help *> $null
-    if ($LASTEXITCODE -eq 0) {
-        $canConfigure = $true
-    }
-
-    if ($canConfigure) {
-        Invoke-Retry -Name "winget configure packages" -ScriptBlock {
-            winget configure `
-                --file $PackagesConfig `
-                --accept-configuration-agreements `
-                --disable-interactivity
-
-            if ($LASTEXITCODE -ne 0) {
-                throw "winget configure failed with exit code $LASTEXITCODE"
-            }
-        }
-    } else {
-        "winget configure is unavailable; falling back to apps-winget.txt installs."
-    }
-}
-
-if (-not (Test-Path -LiteralPath $PackagesConfig) -or -not $canConfigure) {
-    Get-Content -LiteralPath $AppsFile | ForEach-Object {
-        $id = $_.Trim()
-        if ($id -and -not $id.StartsWith("#")) {
-            Invoke-Retry -Name "winget install $id" -ScriptBlock {
-                winget install --id $id --exact --source winget --accept-package-agreements --accept-source-agreements
-                if ($LASTEXITCODE -ne 0) {
-                    throw "winget install failed for $id with exit code $LASTEXITCODE"
-                }
-            }
-        }
-    }
-}
+& "$PSScriptRoot\packages.ps1"
 
 & "$PSScriptRoot\refresh-path.ps1"
 
-& "$PSScriptRoot\restore.ps1"
+& "$PSScriptRoot\link.ps1"
 
 $bashPreexec = Join-Path $env:USERPROFILE ".bash-preexec.sh"
 if (-not (Test-Path -LiteralPath $bashPreexec)) {

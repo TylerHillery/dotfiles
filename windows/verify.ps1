@@ -20,24 +20,40 @@ foreach ($check in $checks) {
     }
 }
 
-$files = @(
-    "$env:USERPROFILE\.bashrc",
-    "$env:USERPROFILE\.bash_profile",
-    "$env:USERPROFILE\.inputrc",
-    "$env:USERPROFILE\.gitconfig",
-    "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1",
-    "$env:LOCALAPPDATA\mise\config\config.toml",
-    "$env:USERPROFILE\.config\atuin\config.toml",
-    "$env:APPDATA\Code\User\settings.json",
-    "$env:APPDATA\Code\User\keybindings.json"
+$links = @(
+    @{ Source = "$PSScriptRoot\bashrc"; Destination = "$env:USERPROFILE\.bashrc" },
+    @{ Source = "$PSScriptRoot\bash_profile"; Destination = "$env:USERPROFILE\.bash_profile" },
+    @{ Source = "$PSScriptRoot\inputrc"; Destination = "$env:USERPROFILE\.inputrc" },
+    @{ Source = "$PSScriptRoot\gitconfig"; Destination = "$env:USERPROFILE\.gitconfig" },
+    @{ Source = "$PSScriptRoot\powershell_profile.ps1"; Destination = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1" },
+    @{ Source = "$PSScriptRoot\mise_config.toml"; Destination = "$env:LOCALAPPDATA\mise\config\config.toml" },
+    @{ Source = "$PSScriptRoot\atuin_config.toml"; Destination = "$env:USERPROFILE\.config\atuin\config.toml" },
+    @{ Source = "$PSScriptRoot\vscode\settings.jsonc"; Destination = "$env:APPDATA\Code\User\settings.json" },
+    @{ Source = "$PSScriptRoot\vscode\keybindings.jsonc"; Destination = "$env:APPDATA\Code\User\keybindings.json" },
+    @{ Source = "$PSScriptRoot\terminal\settings.json"; Destination = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" },
+    @{ Source = "$PSScriptRoot\powertoys\settings.json"; Destination = "$env:LOCALAPPDATA\Microsoft\PowerToys\settings.json" },
+    @{ Source = "$PSScriptRoot\powertoys\Keyboard Manager\settings.json"; Destination = "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\settings.json" },
+    @{ Source = "$PSScriptRoot\powertoys\Keyboard Manager\default.json"; Destination = "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\default.json" },
+    @{ Source = "$PSScriptRoot\powertoys\Keyboard Manager\editorSettings.json"; Destination = "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\editorSettings.json" }
 )
 
-foreach ($file in $files) {
-    if (Test-Path -LiteralPath $file) {
-        "OK: $file"
+foreach ($link in $links) {
+    if (-not (Test-Path -LiteralPath $link.Source)) {
+        continue
+    }
+
+    if (Test-Path -LiteralPath $link.Destination) {
+        $item = Get-Item -LiteralPath $link.Destination -Force
+        $isLink = ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0
+        if ($isLink) {
+            "OK: $($link.Destination) -> $($link.Source)"
+        } else {
+            "NOT LINKED: $($link.Destination)"
+            $missing += $link.Destination
+        }
     } else {
-        "MISSING: $file"
-        $missing += $file
+        "MISSING: $($link.Destination)"
+        $missing += $link.Destination
     }
 }
 
@@ -45,28 +61,17 @@ $trackedWslConfig = Join-Path $PSScriptRoot "wslconfig"
 if (Test-Path -LiteralPath $trackedWslConfig) {
     $liveWslConfig = "$env:USERPROFILE\.wslconfig"
     if (Test-Path -LiteralPath $liveWslConfig) {
-        "OK: $liveWslConfig"
+        $item = Get-Item -LiteralPath $liveWslConfig -Force
+        $isLink = ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0
+        if ($isLink) {
+            "OK: $liveWslConfig -> $trackedWslConfig"
+        } else {
+            "NOT LINKED: $liveWslConfig"
+            $missing += $liveWslConfig
+        }
     } else {
         "MISSING: $liveWslConfig"
         $missing += $liveWslConfig
-    }
-}
-
-$wslRoot = Join-Path $PSScriptRoot "wsl"
-if (Test-Path -LiteralPath $wslRoot) {
-    Get-ChildItem -LiteralPath $wslRoot -Directory | ForEach-Object {
-        $distro = $_.Name
-        $expected = Join-Path $_.FullName "wsl.conf"
-
-        if ((Test-Path -LiteralPath $expected) -and (Get-Command wsl.exe -ErrorAction SilentlyContinue)) {
-            wsl.exe -d $distro -- test -f /etc/wsl.conf
-            if ($LASTEXITCODE -eq 0) {
-                "OK: WSL $distro /etc/wsl.conf"
-            } else {
-                "MISSING: WSL $distro /etc/wsl.conf"
-                $missing += "WSL $distro /etc/wsl.conf"
-            }
-        }
     }
 }
 
