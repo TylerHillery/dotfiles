@@ -11,7 +11,8 @@
     {
       "command": {
         "action": "splitPane",
-        "split": "right"
+        "split": "right",
+        "splitMode": "duplicate"
       },
       "id": "User.splitPane.864CD510"
     },
@@ -32,7 +33,8 @@
     {
       "command": {
         "action": "splitPane",
-        "split": "down"
+        "split": "down",
+        "splitMode": "duplicate"
       },
       "id": "User.splitPane.D5151347"
     },
