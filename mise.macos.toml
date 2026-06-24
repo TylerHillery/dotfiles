@@ -74,6 +74,9 @@
 [bootstrap.user]
 login_shell = "/bin/zsh"
 
+[bootstrap.macos.keyboard]
+press_and_hold = false
+
 [tasks.bootstrap]
 description = "Run idempotent macOS setup that does not fit declarative bootstrap"
 run = [
