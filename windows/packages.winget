@@ -76,3 +76,35 @@ resources:
       source: winget
       acceptAgreements: true
       useLatest: true
+
+  - name: DockerDesktop
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Docker.DockerDesktop
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: Notion
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Notion.Notion
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: Spark
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Readdle.Spark
+      source: winget
+      acceptAgreements: true
+      useLatest: true
+
+  - name: OBSStudio
+    type: Microsoft.WinGet/Package
+    properties:
+      id: OBSProject.OBSStudio
+      source: winget
+      acceptAgreements: true
+      useLatest: true
