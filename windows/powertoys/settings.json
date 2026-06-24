@@ -58,6 +58,6 @@
   },
   "theme": "system",
   "system_theme": "dark",
-  "powertoys_version": "v0.100.0",
+  "powertoys_version": "v0.100.1",
   "ignored_conflict_properties": { "ignored_shortcuts": [] }
 }
