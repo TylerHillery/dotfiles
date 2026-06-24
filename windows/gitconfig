@@ -24,8 +24,10 @@
         conflictStyle = zdiff3
 [branch]
         autoSetupMerge = false # so when I checkout another person's branch it doesn't auto set it as upstream
-[credential]
-		helper = manager
+[credential "https://github.com"]
+	helper = !'C:\\Users\\Tyler\\AppData\\Local\\mise\\installs\\gh\\2.95.0\\bin\\gh.exe' auth git-credential
+[credential "https://gist.github.com"]
+	helper = !'C:\\Users\\Tyler\\AppData\\Local\\mise\\installs\\gh\\2.95.0\\bin\\gh.exe' auth git-credential
 [credential "https://dev.azure.com"]
 		useHttpPath = true
 # windows stuff that was here by default
