@@ -8,6 +8,8 @@ Install mise first, then run from the repo root:
 
 ```powershell
 winget install jdx.mise --exact --source winget
+winget install Git.Git --exact --source winget
+wsl --install
 mise config
 mise bootstrap --dry-run
 mise bootstrap --yes
