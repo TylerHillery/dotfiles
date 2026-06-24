@@ -9,6 +9,7 @@
 "~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1" = { source = "windows/powershell_profile.ps1", mode = "symlink" }
 "~/AppData/Roaming/Code/User/settings.json" = { source = "windows/vscode/settings.jsonc", mode = "symlink" }
 "~/AppData/Roaming/Code/User/keybindings.json" = { source = "windows/vscode/keybindings.jsonc", mode = "symlink" }
+"~/AppData/Local/Packages/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe/LocalState/settings.json" = { source = "windows/winget/settings.json", mode = "symlink" }
 "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json" = { source = "windows/terminal/settings.json", mode = "symlink" }
 "~/AppData/Local/Microsoft/PowerToys/settings.json" = { source = "windows/powertoys/settings.json", mode = "symlink" }
 "~/AppData/Local/Microsoft/PowerToys/Keyboard Manager/settings.json" = { source = "windows/powertoys/Keyboard Manager/settings.json", mode = "symlink" }

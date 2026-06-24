@@ -22,6 +22,7 @@ Windows GUI apps are installed by `windows/bootstrap.ps1` from the official WinG
 - `powershell_profile.ps1`: linked to the Windows PowerShell profile path
 - `atuin_config.toml`: linked to `~/.config/atuin/config.toml`
 - `vscode/settings.jsonc`, `vscode/keybindings.jsonc`: VS Code settings
+- `winget/settings.json`: WinGet settings, including configuration support
 - `terminal/settings.json`: Windows Terminal settings
 - `powertoys/`: PowerToys settings, including Keyboard Manager
 - `bootstrap.ps1`: Windows bootstrap orchestrator called by mise
