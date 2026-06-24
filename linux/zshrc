@@ -58,3 +58,7 @@ fi
 if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
+
+# Disable cursor blink and prefer a steady block cursor in supporting terminals.
+printf '\e[?12l'
+printf '\e[2 q'

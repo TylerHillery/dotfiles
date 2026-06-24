@@ -26,7 +26,7 @@ go = "latest"
 
 # Formatters
 shfmt = "latest"
-prettier = { version = "latest", depends = ["node"] }
+prettier = { version = "3.8.4", depends = ["node"] }
 biome = "latest"
 clang-format = "latest"
 
