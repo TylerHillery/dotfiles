@@ -1,0 +1,20 @@
+[dotfiles]
+"~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
+"~/.config/mise/config.windows.toml" = { source = "mise.windows.toml", mode = "symlink" }
+"~/.bashrc" = { source = "windows/bashrc", mode = "symlink" }
+"~/.bash_profile" = { source = "windows/bash_profile", mode = "symlink" }
+"~/.inputrc" = { source = "windows/inputrc", mode = "symlink" }
+"~/.gitconfig" = { source = "windows/gitconfig", mode = "symlink" }
+"~/.config/atuin/config.toml" = { source = "windows/atuin_config.toml", mode = "symlink" }
+"~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1" = { source = "windows/powershell_profile.ps1", mode = "symlink" }
+"~/AppData/Roaming/Code/User/settings.json" = { source = "windows/vscode/settings.jsonc", mode = "symlink" }
+"~/AppData/Roaming/Code/User/keybindings.json" = { source = "windows/vscode/keybindings.jsonc", mode = "symlink" }
+"~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json" = { source = "windows/terminal/settings.json", mode = "symlink" }
+"~/AppData/Local/Microsoft/PowerToys/settings.json" = { source = "windows/powertoys/settings.json", mode = "symlink" }
+"~/AppData/Local/Microsoft/PowerToys/Keyboard Manager/settings.json" = { source = "windows/powertoys/Keyboard Manager/settings.json", mode = "symlink" }
+"~/AppData/Local/Microsoft/PowerToys/Keyboard Manager/default.json" = { source = "windows/powertoys/Keyboard Manager/default.json", mode = "symlink" }
+"~/AppData/Local/Microsoft/PowerToys/Keyboard Manager/editorSettings.json" = { source = "windows/powertoys/Keyboard Manager/editorSettings.json", mode = "symlink" }
+
+[tasks.bootstrap]
+description = "Run idempotent Windows setup and GUI app installs"
+run = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File windows/bootstrap.ps1"

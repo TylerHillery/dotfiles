@@ -1,4 +1,4 @@
 linux/*.sh text eol=lf
-linux/Makefile text eol=lf
 linux/zshrc text eol=lf
 linux/*.zsh-theme text eol=lf
+shared/**/*.sh text eol=lf

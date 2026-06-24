@@ -1,0 +1,83 @@
+[bootstrap.packages]
+# core
+"brew:git" = "latest"
+"brew:tmux" = "latest"
+"brew:make" = "latest"
+"brew:curl" = "latest"
+"brew:wget" = "latest"
+"brew:tree" = "latest"
+"brew:telnet" = "latest"
+"brew:openssl@3" = "latest"
+"brew:ffmpeg" = "latest"
+"brew:mas" = "latest"
+"brew:scrcpy" = "latest"
+
+# DBs
+"brew:libpq" = "latest"
+
+# dev tools
+"brew-cask:google-chrome" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:visual-studio-code" = "latest"
+"brew-cask:datagrip" = "latest"
+"brew-cask:orbstack" = "latest"
+"brew-cask:lens" = "latest"
+"brew-cask:wireshark-app" = "latest"
+"brew-cask:ngrok" = "latest"
+"brew-cask:yaak" = "latest"
+"brew-cask:bitwarden" = "latest"
+"brew-cask:utm" = "latest"
+
+# productivity
+"brew-cask:alt-tab" = "latest"
+"brew-cask:rectangle" = "latest"
+"brew-cask:linear" = "latest"
+"brew-cask:notion" = "latest"
+"brew-cask:reader" = "latest"
+"brew-cask:anki" = "latest"
+"brew-cask:readdle-spark" = "latest"
+"brew-cask:quarto" = "latest"
+"brew-cask:obs" = "latest"
+"brew-cask:zoom" = "latest"
+"brew-cask:slack" = "latest"
+"brew-cask:discord" = "latest"
+
+# other
+"brew-cask:font-jetbrains-mono-nerd-font" = "latest"
+"brew-cask:spotify" = "latest"
+"brew-cask:betterdisplay" = "latest"
+"brew-cask:logi-options+" = "latest"
+"brew-cask:logitune" = "latest"
+"brew-cask:mitmproxy" = "latest"
+"brew-cask:android-platform-tools" = "latest"
+
+# Mac App Store
+"mas:302584613" = "latest"  # Kindle
+"mas:1475387142" = "latest" # Tailscale
+"mas:462058435" = "latest"  # Microsoft Excel
+"mas:462062816" = "latest"  # Microsoft PowerPoint
+"mas:1233965871" = "latest" # ScreenBrush
+
+[dotfiles]
+"~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
+"~/.config/mise/config.macos.toml" = { source = "mise.macos.toml", mode = "symlink" }
+"~/.gitconfig" = { source = "mac/gitconfig", mode = "symlink" }
+"~/.zshrc" = { source = "mac/zshrc", mode = "symlink" }
+"~/.tmux.conf" = { source = "mac/tmux.conf", mode = "symlink" }
+"~/.config/atuin/config.toml" = { source = "mac/atuin_config.toml", mode = "symlink" }
+"~/.config/ghostty/config" = { source = "mac/ghostty_config", mode = "symlink" }
+"~/.config/ghostty/vim.ghostty" = { source = "mac/vim.ghostty", mode = "symlink" }
+"~/Library/Application Support/Code/User/settings.json" = { source = "mac/vscode_settings.jsonc", mode = "symlink" }
+"~/Library/Application Support/Code/User/keybindings.json" = { source = "mac/vscode_keybindings.jsonc", mode = "symlink" }
+"~/.oh-my-zsh/custom/themes/tylerhillery.zsh-theme" = { source = "shared/zsh/tylerhillery.zsh-theme", mode = "symlink" }
+
+[bootstrap.user]
+login_shell = "/bin/zsh"
+
+[tasks.bootstrap]
+description = "Run idempotent macOS setup that does not fit declarative bootstrap"
+run = [
+  "mise run bootstrap:oh-my-zsh",
+  "mise run bootstrap:nvim",
+  "mise run bootstrap:vscode-extensions",
+]

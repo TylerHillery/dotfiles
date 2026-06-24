@@ -1,6 +1,6 @@
 [user]
         name = Tyler Hillery
-        email = tyhillery@gmail.com 
+        email = tyhillery@gmail.com
 [init]
         defaultBranch = main
 [pull]

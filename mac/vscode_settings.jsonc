@@ -65,7 +65,7 @@
     "terminalCommandDecoration.defaultBackground": "#0000",
     "terminalCommandDecoration.errorBackground": "#0000",
     "terminalCommandDecoration.successBackground": "#0000",
-    "terminalOverviewRuler.border": "#0000"
+    "terminalOverviewRuler.border": "#0000",
   },
   "search.defaultViewMode": "tree",
   "window.zoomLevel": 0,
@@ -74,6 +74,11 @@
   "window.commandCenter": false,
   "window.customTitleBarVisibility": "never",
   "files.autoSave": "afterDelay",
+  "files.associations": {
+    "*.jsonc": "jsonc",
+    "**/dotfiles/windows/**/*.json": "jsonc",
+    "**/dotfiles/mac/RectangleConfig.json": "jsonc",
+  },
   // vim settings
   "vim.leader": "<Space>",
   "vim.useSystemClipboard": true,
@@ -82,28 +87,28 @@
   "python.languageServer": "None",
   "ty.inlayHints.variableTypes": true,
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.defaultFormatter": "charliermarsh.ruff",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "biomejs.biome",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "biomejs.biome",
   },
   "[c]": {
-    "editor.defaultFormatter": "xaver.clang-format"
+    "editor.defaultFormatter": "xaver.clang-format",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "json.schemaDownload.trustedDomains": {
     "https://schemastore.azurewebsites.net/": true,
@@ -111,9 +116,9 @@
     "https://www.schemastore.org/": true,
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
-    "https://biomejs.dev": true
+    "https://biomejs.dev": true,
   },
-   "clang-format.executable": "/opt/homebrew/bin/clang-format",
+  "clang-format.executable": "/opt/homebrew/bin/clang-format",
   // extension settings
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   // gitlens,
@@ -133,5 +138,5 @@
   "github.copilot.nextEditSuggestions.enabled": false,
   // other
   "redhat.telemetry.enabled": false,
-  "chat.viewSessions.orientation": "stacked"
+  "chat.viewSessions.orientation": "stacked",
 }

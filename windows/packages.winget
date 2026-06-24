@@ -61,34 +61,10 @@ resources:
       acceptAgreements: true
       useLatest: true
 
-  - name: Mise
+  - name: JetBrainsMonoNerdFont
     type: Microsoft.WinGet/Package
     properties:
-      id: jdx.mise
-      source: winget
-      acceptAgreements: true
-      useLatest: true
-
-  - name: Make
-    type: Microsoft.WinGet/Package
-    properties:
-      id: ezwinports.make
-      source: winget
-      acceptAgreements: true
-      useLatest: true
-
-  - name: Atuin
-    type: Microsoft.WinGet/Package
-    properties:
-      id: Atuinsh.Atuin
-      source: winget
-      acceptAgreements: true
-      useLatest: true
-
-  - name: Delta
-    type: Microsoft.WinGet/Package
-    properties:
-      id: dandavison.delta
+      id: DEVCOM.JetBrainsMonoNerdFont
       source: winget
       acceptAgreements: true
       useLatest: true

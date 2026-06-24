@@ -24,7 +24,7 @@ fi
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 #########
-# env 
+# env
 #########
 
 # general

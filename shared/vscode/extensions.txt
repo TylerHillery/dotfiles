@@ -1,0 +1,74 @@
+# Themes
+pkief.material-icon-theme
+zhuangtongfa.material-theme
+
+# Editor workflow
+vscodevim.vim
+eamodio.gitlens
+streetsidesoftware.code-spell-checker
+hverlin.mise-vscode
+mikestead.dotenv
+tamasfe.even-better-toml
+bierner.markdown-mermaid
+github.vscode-github-actions
+bbenoist.nix
+foxundermoon.shell-format
+
+# Containers
+ms-azuretools.vscode-containers
+ms-azuretools.vscode-docker
+
+# dbt
+altimateai.vscode-altimate-mcp-server
+innoverio.vscode-dbt-power-user
+
+# Python
+astral-sh.ty
+charliermarsh.ruff
+ms-python.debugpy
+ms-python.python
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
+
+# C and C++
+ms-vscode.cmake-tools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cpptools-themes
+ms-vscode.cpptools
+ms-vscode.cpp-devtools
+xaver.clang-format
+
+# Rust
+rust-lang.rust-analyzer
+
+# Java
+redhat.java
+vscjava.vscode-gradle
+vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+vscjava.vscode-java-pack
+vscjava.vscode-java-test
+vscjava.vscode-maven
+
+# Remote development
+ms-vscode-remote.remote-containers
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode-remote.vscode-remote-extensionpack
+ms-vscode.remote-explorer
+ms-vscode.remote-server
+ms-vsliveshare.vsliveshare
+tailscale.vscode-tailscale
+
+# Web development
+biomejs.biome
+esbenp.prettier-vscode
+dbaeumer.vscode-eslint
+yoavbls.pretty-ts-errors
+samuelcolvin.jinjahtml
+denoland.vscode-deno
+ritwickdey.liveserver
+bradlc.vscode-tailwindcss

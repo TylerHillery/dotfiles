@@ -1,0 +1,33 @@
+[bootstrap.packages]
+"apt:git" = "latest"
+"apt:zsh" = "latest"
+"apt:tmux" = "latest"
+"apt:make" = "latest"
+"apt:curl" = "latest"
+"apt:wget" = "latest"
+"apt:tree" = "latest"
+"apt:ca-certificates" = "latest"
+"apt:build-essential" = "latest"
+"apt:pkg-config" = "latest"
+"apt:libssl-dev" = "latest"
+"apt:ffmpeg" = "latest"
+
+[dotfiles]
+"~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
+"~/.config/mise/config.linux.toml" = { source = "mise.linux.toml", mode = "symlink" }
+"~/.gitconfig" = { source = "linux/gitconfig", mode = "symlink" }
+"~/.zshrc" = { source = "linux/zshrc", mode = "symlink" }
+"~/.tmux.conf" = { source = "linux/tmux.conf", mode = "symlink" }
+"~/.config/atuin/config.toml" = { source = "linux/atuin_config.toml", mode = "symlink" }
+"~/.oh-my-zsh/custom/themes/tylerhillery.zsh-theme" = { source = "shared/zsh/tylerhillery.zsh-theme", mode = "symlink" }
+
+[bootstrap.user]
+login_shell = "/usr/bin/zsh"
+
+[tasks.bootstrap]
+description = "Run idempotent Linux setup that does not fit declarative bootstrap"
+run = [
+  "mise run bootstrap:oh-my-zsh",
+  "mise run bootstrap:nvim",
+  "mise run bootstrap:wsl-conf",
+]

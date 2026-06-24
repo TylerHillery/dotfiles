@@ -1,256 +1,240 @@
 {
-    "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
-        {
-            "command": 
-            {
-                "action": "closeTab"
-            },
-            "id": "User.closeTab.0"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "right"
-            },
-            "id": "User.splitPane.864CD510"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "previousInOrder"
-            },
-            "id": "User.moveFocus.787314EB"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "id": "User.resizePane.6CD791B"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down"
-            },
-            "id": "User.splitPane.D5151347"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "right"
-            },
-            "id": "User.moveFocus.87C324ED"
-        },
-        {
-            "command": "duplicateTab",
-            "id": "User.duplicateTab"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "left"
-            },
-            "id": "User.moveFocus.2A0DA8E0"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "nextInOrder"
-            },
-            "id": "User.moveFocus.D7681B66"
-        }
-    ],
-    "copyFormatting": "none",
-    "copyOnSelect": true,
-    "defaultProfile": "{99232d66-401e-4a96-b953-fa50073529bf}",
-    "disableAnimations": true,
-    "firstWindowPreference": "persistedWindowLayout",
-    "keybindings": 
-    [
-        {
-            "id": "User.duplicateTab",
-            "keys": "ctrl+t"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+w"
-        },
-        {
-            "id": "Terminal.PasteFromClipboard",
-            "keys": "ctrl+v"
-        },
-        {
-            "id": null,
-            "keys": "alt+down"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+t"
-        },
-        {
-            "id": "User.splitPane.864CD510",
-            "keys": "alt+d"
-        },
-        {
-            "id": "Terminal.MoveFocusLeft",
-            "keys": "alt+h"
-        },
-        {
-            "id": "User.moveFocus.D7681B66",
-            "keys": "alt+]"
-        },
-        {
-            "id": "User.moveFocus.787314EB",
-            "keys": "alt+["
-        },
-        {
-            "id": "Terminal.ClosePane",
-            "keys": "ctrl+w"
-        },
-        {
-            "id": "Terminal.ResizePaneDown",
-            "keys": "alt+shift+j"
-        },
-        {
-            "id": "User.closeTab.0",
-            "keys": "alt+shift+w"
-        },
-        {
-            "id": "User.splitPane.D5151347",
-            "keys": "ctrl+shift+d"
-        },
-        {
-            "id": null,
-            "keys": "alt+shift+down"
-        },
-        {
-            "id": null,
-            "keys": "alt+shift+up"
-        },
-        {
-            "id": "Terminal.ResizePaneLeft",
-            "keys": "alt+shift+h"
-        },
-        {
-            "id": null,
-            "keys": "alt+shift+left"
-        },
-        {
-            "id": "Terminal.ResizePaneRight",
-            "keys": "alt+shift+l"
-        },
-        {
-            "id": null,
-            "keys": "alt+shift+right"
-        },
-        {
-            "id": "User.resizePane.6CD791B",
-            "keys": "alt+shift+k"
-        },
-        {
-            "id": "Terminal.MoveFocusDown",
-            "keys": "ctrl+j"
-        },
-        {
-            "id": "Terminal.MoveFocusRight",
-            "keys": "alt+l"
-        },
-        {
-            "id": "Terminal.MoveFocusUp",
-            "keys": "alt+k"
-        },
-        {
-            "id": null,
-            "keys": "alt+up"
-        }
-    ],
-    "newTabMenu": 
-    [
-        {
-            "icon": null,
-            "profile": "{99232d66-401e-4a96-b953-fa50073529bf}",
-            "type": "profile"
-        },
-        {
-            "icon": null,
-            "profile": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
-            "type": "profile"
-        },
-        {
-            "icon": null,
-            "profile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-            "type": "profile"
-        }
-    ],
-    "newTabPosition": "afterCurrentTab",
-    "profiles": 
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
     {
-        "defaults": 
-        {
-            "colorScheme": "One Half Dark",
-            "cursorShape": "filledBox",
-            "font": 
-            {
-                "face": "JetBrainsMono Nerd Font"
-            }
-        },
-        "list": 
-        [
-            {
-                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
-                "guid": "{99232d66-401e-4a96-b953-fa50073529bf}",
-                "hidden": false,
-                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
-                "name": "Git Bash",
-                "startingDirectory": "%USERPROFILE%",
-                "tabTitle": "Git Bash"
-            },
-            {
-                "font": 
-                {
-                    "face": "JetBrainsMono Nerd Font"
-                },
-                "guid": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "Microsoft.WSL"
-            },
-            {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell"
-            },
-            {
-                "commandline": "%SystemRoot%\\System32\\cmd.exe",
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
-                "name": "Command Prompt"
-            },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            }
-        ]
+      "command": {
+        "action": "closeTab"
+      },
+      "id": "User.closeTab.0"
     },
-    "schemes": [],
-    "searchWebDefaultQueryUrl": "https://www.google.com/search?q=%22%s%22",
-    "showTabsInTitlebar": true,
-    "showTerminalTitleInTitlebar": true,
-    "tabSwitcherMode": "disabled",
-    "themes": [],
-    "windowingBehavior": "useExisting"
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "right"
+      },
+      "id": "User.splitPane.864CD510"
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "previousInOrder"
+      },
+      "id": "User.moveFocus.787314EB"
+    },
+    {
+      "command": {
+        "action": "resizePane",
+        "direction": "up"
+      },
+      "id": "User.resizePane.6CD791B"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "down"
+      },
+      "id": "User.splitPane.D5151347"
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "right"
+      },
+      "id": "User.moveFocus.87C324ED"
+    },
+    {
+      "command": "duplicateTab",
+      "id": "User.duplicateTab"
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "left"
+      },
+      "id": "User.moveFocus.2A0DA8E0"
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "nextInOrder"
+      },
+      "id": "User.moveFocus.D7681B66"
+    }
+  ],
+  "copyFormatting": "none",
+  "copyOnSelect": true,
+  "defaultProfile": "{99232d66-401e-4a96-b953-fa50073529bf}",
+  "disableAnimations": true,
+  "firstWindowPreference": "persistedWindowLayout",
+  "keybindings": [
+    {
+      "id": "User.duplicateTab",
+      "keys": "ctrl+t"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+w"
+    },
+    {
+      "id": "Terminal.PasteFromClipboard",
+      "keys": "ctrl+v"
+    },
+    {
+      "id": null,
+      "keys": "alt+down"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+t"
+    },
+    {
+      "id": "User.splitPane.864CD510",
+      "keys": "alt+d"
+    },
+    {
+      "id": "Terminal.MoveFocusLeft",
+      "keys": "alt+h"
+    },
+    {
+      "id": "User.moveFocus.D7681B66",
+      "keys": "alt+]"
+    },
+    {
+      "id": "User.moveFocus.787314EB",
+      "keys": "alt+["
+    },
+    {
+      "id": "Terminal.ClosePane",
+      "keys": "ctrl+w"
+    },
+    {
+      "id": "Terminal.ResizePaneDown",
+      "keys": "alt+shift+j"
+    },
+    {
+      "id": "User.closeTab.0",
+      "keys": "alt+shift+w"
+    },
+    {
+      "id": "User.splitPane.D5151347",
+      "keys": "ctrl+shift+d"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+down"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+up"
+    },
+    {
+      "id": "Terminal.ResizePaneLeft",
+      "keys": "alt+shift+h"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+left"
+    },
+    {
+      "id": "Terminal.ResizePaneRight",
+      "keys": "alt+shift+l"
+    },
+    {
+      "id": null,
+      "keys": "alt+shift+right"
+    },
+    {
+      "id": "User.resizePane.6CD791B",
+      "keys": "alt+shift+k"
+    },
+    {
+      "id": "Terminal.MoveFocusDown",
+      "keys": "ctrl+j"
+    },
+    {
+      "id": "Terminal.MoveFocusRight",
+      "keys": "alt+l"
+    },
+    {
+      "id": "Terminal.MoveFocusUp",
+      "keys": "alt+k"
+    },
+    {
+      "id": null,
+      "keys": "alt+up"
+    }
+  ],
+  "newTabMenu": [
+    {
+      "icon": null,
+      "profile": "{99232d66-401e-4a96-b953-fa50073529bf}",
+      "type": "profile"
+    },
+    {
+      "icon": null,
+      "profile": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
+      "type": "profile"
+    },
+    {
+      "icon": null,
+      "profile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+      "type": "profile"
+    }
+  ],
+  "newTabPosition": "afterCurrentTab",
+  "profiles": {
+    "defaults": {
+      "colorScheme": "One Half Dark",
+      "cursorShape": "filledBox",
+      "font": {
+        "face": "JetBrainsMono Nerd Font"
+      }
+    },
+    "list": [
+      {
+        "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+        "guid": "{99232d66-401e-4a96-b953-fa50073529bf}",
+        "hidden": false,
+        "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+        "name": "Git Bash",
+        "startingDirectory": "%USERPROFILE%",
+        "tabTitle": "Git Bash"
+      },
+      {
+        "font": {
+          "face": "JetBrainsMono Nerd Font"
+        },
+        "guid": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "source": "Microsoft.WSL"
+      },
+      {
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell"
+      },
+      {
+        "commandline": "%SystemRoot%\\System32\\cmd.exe",
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": false,
+        "name": "Command Prompt"
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      }
+    ]
+  },
+  "schemes": [],
+  "searchWebDefaultQueryUrl": "https://www.google.com/search?q=%22%s%22",
+  "showTabsInTitlebar": true,
+  "showTerminalTitleInTitlebar": true,
+  "tabSwitcherMode": "disabled",
+  "themes": [],
+  "windowingBehavior": "useExisting"
 }

@@ -58,7 +58,7 @@ if command -v atuin >/dev/null 2>&1; then
 fi
 
 #########
-# env 
+# env
 #########
 
 # general

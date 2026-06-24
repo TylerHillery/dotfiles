@@ -1,56 +1,26 @@
-# dotfiles
+# macOS dotfiles
 
-This includes my configuration for homebrew, ZSH, git, terminal emulators and other stuff.
+macOS setup is declared in `../mise.macos.toml` and loaded automatically by mise because `.miserc.toml` enables `auto_env`.
 
-## Requirements
+## Fresh install
 
-* git
-* make
-
-## Install
-
-To set up all of the files as symlinks in your home directory, just run this:
-
-```
-make all
+```bash
+mise config
+mise bootstrap --dry-run
+mise bootstrap --yes
 ```
 
-## Installing with homebrew
+## What lives here
 
-```
-make brew 
-```
+- `zshrc`: linked to `~/.zshrc`
+- `gitconfig`: linked to `~/.gitconfig`
+- `atuin_config.toml`: linked to `~/.config/atuin/config.toml`
+- `tmux.conf`: linked to `~/.tmux.conf`
+- `ghostty_config` and `vim.ghostty`: linked into `~/.config/ghostty`
+- `vscode_settings.jsonc`, `vscode_keybindings.jsonc`: VS Code settings
 
-The original file was generated with:
+VS Code extensions are shared across platforms in `../shared/vscode/extensions.txt`.
 
-```
-brew bundle dump --file=Brewfile
-```
+The oh-my-zsh theme is shared across macOS and Linux in `../shared/zsh/tylerhillery.zsh-theme`.
 
-## Reconciling your Brewfile
-
-To check if you've installed packages outside of your dotfiles environment:
-
-```
-make brew-reconcile
-```
-
-## Managing tools with mise
-
-Install all configured tools from `mise_config.toml`:
-
-```
-mise install
-```
-
-Clean up unused tool versions:
-
-```
-mise prune
-```
-
-List installed tools:
-
-```
-mise list
-```
+macOS GUI apps are declared as `brew-cask:*` entries in `../mise.macos.toml`.

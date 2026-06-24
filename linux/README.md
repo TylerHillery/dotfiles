@@ -1,47 +1,37 @@
-# Linux dotfiles
+# Linux and WSL dotfiles
 
-Linux/WSL shell configuration. This uses symlinks like the macOS dotfiles and uses zsh with oh-my-zsh.
+Linux setup is declared in `../mise.linux.toml` and loaded automatically by mise because `.miserc.toml` enables `auto_env`.
 
-## Fresh install
-
-From inside the Linux distro:
+## Normal Linux
 
 ```bash
-cd /mnt/c/Users/Tyler/code/personal/dotfiles/linux
-make install
+mise config
+mise bootstrap --dry-run
+mise bootstrap --yes
 ```
 
-This installs packages from `apt-packages.txt`, installs non-apt tools, installs oh-my-zsh if missing, attempts to set zsh as the default shell, and symlinks dotfiles.
+## WSL
 
-To only relink dotfiles without installing software:
+WSL uses the normal Linux config. The bootstrap task detects WSL and applies `linux/wsl.conf` only when running inside WSL:
 
 ```bash
-make dotfiles
+mise config
+mise bootstrap --dry-run
+mise bootstrap --yes
 ```
 
-Close and reopen the shell after linking.
-
-`/etc/wsl.conf` is tracked as `linux/wsl.conf`, but it is a system file and should be copied into place explicitly:
-
-```bash
-make wsl-conf
-```
-
-Then restart WSL from Windows:
+Restart WSL from Windows after changing `linux/wsl.conf`:
 
 ```powershell
 wsl --shutdown
 ```
 
-`apt-packages.txt` supports comments and blank lines. Lines starting with `#` are ignored.
+## What lives here
 
-## Tracked settings
+- `zshrc`: linked to `~/.zshrc`
+- `gitconfig`: linked to `~/.gitconfig`
+- `atuin_config.toml`: linked to `~/.config/atuin/config.toml`
+- `tmux.conf`: linked to `~/.tmux.conf`
+- `wsl.conf`: applied by Linux bootstrap only when running inside WSL
 
-- `linux/zshrc`: linked to `~/.zshrc`
-- `linux/tylerhillery.zsh-theme`: linked to `~/.oh-my-zsh/custom/themes/tylerhillery.zsh-theme`
-- `linux/gitconfig`: linked to `~/.gitconfig`
-- `linux/atuin_config.toml`: linked to `~/.config/atuin/config.toml`
-- `linux/mise_config.toml`: linked to `~/.config/mise/config.toml`
-- `linux/tmux.conf`: linked to `~/.tmux.conf`
-- `linux/wsl.conf`: copied to `/etc/wsl.conf` with `make wsl-conf`
-- `linux/apt-packages.txt`: apt packages installed by `install.sh`
+The oh-my-zsh theme is shared across macOS and Linux in `../shared/zsh/tylerhillery.zsh-theme`.

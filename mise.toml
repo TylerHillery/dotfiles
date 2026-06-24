@@ -1,0 +1,73 @@
+min_version = { soft = "2026.6.13" }
+
+[tools]
+# Core
+jq = "latest"
+
+# Fast
+prek = "latest"
+ripgrep = "latest"
+fd = "latest"
+fzf = "latest"
+
+# Personal
+atuin = "latest"
+delta = "latest"
+neovim = "latest"
+btop = { version = "latest", os = ["linux", "macos"] }
+opencode = "latest"
+
+# Programming Languages
+rust = "latest"
+uv = "latest"
+node = "latest"
+java = "latest"
+go = "latest"
+
+# Formatters
+shfmt = "latest"
+prettier = "latest"
+biome = "latest"
+clang-format = "latest"
+
+# DBs
+duckdb = "latest"
+
+# Vendor CLIs
+gh = "latest"
+pulumi = "latest"
+aws-cli = "latest"
+gcloud = { version = "latest", os = ["linux", "macos"] }
+
+
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = ["python", "node"]
+status.missing_tools = "never"
+
+[settings.dotfiles]
+default_mode = "symlink"
+
+[tasks.status]
+description = "Show bootstrap and dotfile status"
+run = [
+  "mise config",
+  "mise dotfiles status",
+  "mise bootstrap packages status",
+]
+
+[tasks."bootstrap:oh-my-zsh"]
+description = "Install oh-my-zsh if missing"
+run = "bash shared/bootstrap/install-oh-my-zsh.sh"
+
+[tasks."bootstrap:vscode-extensions"]
+description = "Install shared VS Code extensions"
+run = "bash shared/bootstrap/install-vscode-extensions.sh shared/vscode/extensions.txt"
+
+[tasks."bootstrap:nvim"]
+description = "Install Neovim config if missing"
+run = "bash shared/bootstrap/install-neovim-config.sh"
+
+[tasks."bootstrap:wsl-conf"]
+description = "Apply WSL system config when running inside WSL"
+run = "bash linux/apply-wsl-conf.sh"

@@ -1,6 +1,6 @@
 [user]
         name = Tyler Hillery
-        email = tyhillery@gmail.com 
+        email = tyhillery@gmail.com
 [init]
         defaultBranch = main
 [pull]
@@ -9,30 +9,30 @@
         enabled = true
 [core]
         pager = delta
-	# windows defaults
-	autocrlf = true
-	fscache = true
-	symlinks = true
+		# windows defaults
+		autocrlf = true
+		fscache = true
+		symlinks = true
 [interactive]
         diffFilter = delta --color-only
 [delta]
         navigate = true  # use n and N to move between diff sections
         side-by-side = true
 [diff "astextplain"]
-	textconv = astextplain
+		textconv = astextplain
 [merge]
         conflictStyle = zdiff3
 [branch]
         autoSetupMerge = false # so when I checkout another person's branch it doesn't auto set it as upstream
 [credential]
-	helper = manager
+		helper = manager
 [credential "https://dev.azure.com"]
-	useHttpPath = true
+		useHttpPath = true
 # windows stuff that was here by default
 [http]
-	sslBackend = schannel
+		sslBackend = schannel
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true 
+		clean = git-lfs clean -- %f
+		smudge = git-lfs smudge -- %f
+		process = git-lfs filter-process
+		required = true
