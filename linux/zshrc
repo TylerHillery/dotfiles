@@ -44,14 +44,14 @@ export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
 
-# atuin for better ctrl+r
-if command -v atuin >/dev/null 2>&1; then
-  eval "$(atuin init zsh --disable-up-arrow)"
-fi
-
 # manage versions across various tools
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
+fi
+
+# atuin for better ctrl+r
+if command -v atuin >/dev/null 2>&1; then
+  eval "$(atuin init zsh --disable-up-arrow)"
 fi
 
 # direnv
