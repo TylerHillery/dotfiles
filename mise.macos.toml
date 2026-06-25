@@ -48,7 +48,9 @@ press_and_hold = false
 
 [tasks."bootstrap:brew-bundle"]
 description = "Install GUI casks and Mac App Store apps from mac/Brewfile"
-run = "brew bundle --file mac/Brewfile"
+# eval shellenv so brew is found on a fresh machine where /opt/homebrew/bin
+# isn't on PATH yet (the pre-packages hook installs it in a separate process).
+run = 'eval "$(/opt/homebrew/bin/brew shellenv)" && brew bundle --file mac/Brewfile'
 
 [tasks.bootstrap]
 description = "Run idempotent macOS setup that does not fit declarative bootstrap"
