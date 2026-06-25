@@ -29,6 +29,7 @@ cask "obs"
 cask "zoom"
 cask "slack"
 cask "discord"
+cask "displaylink"
 
 # other
 cask "font-jetbrains-mono-nerd-font"
