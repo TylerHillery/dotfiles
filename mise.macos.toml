@@ -14,52 +14,18 @@ claude-code = "latest"
 "brew:ffmpeg" = "latest"
 "brew:mas" = "latest"
 "brew:scrcpy" = "latest"
+"brew:btop" = "latest"
 
 # DBs
 "brew:libpq" = "latest"
 
-# dev tools
-"brew-cask:google-chrome" = "latest"
-"brew-cask:ghostty" = "latest"
-"brew-cask:visual-studio-code" = "latest"
-"brew-cask:datagrip" = "latest"
-"brew-cask:orbstack" = "latest"
-"brew-cask:lens" = "latest"
-"brew-cask:wireshark-app" = "latest"
-"brew-cask:ngrok" = "latest"
-"brew-cask:yaak" = "latest"
-"brew-cask:bitwarden" = "latest"
-"brew-cask:utm" = "latest"
+# GUI casks and Mac App Store apps live in mac/Brewfile and are installed by the
+# `bootstrap` task via `brew bundle`. mise's brew-cask provider can't install
+# casks with binary/manpage/pkg artifacts (vscode, datagrip, orbstack, ...), so
+# real Homebrew owns them. Homebrew is installed by the pre-packages hook below.
 
-# productivity
-"brew-cask:alt-tab" = "latest"
-"brew-cask:rectangle" = "latest"
-"brew-cask:linear" = "latest"
-"brew-cask:notion" = "latest"
-"brew-cask:reader" = "latest"
-"brew-cask:anki" = "latest"
-"brew-cask:readdle-spark" = "latest"
-"brew-cask:quarto" = "latest"
-"brew-cask:obs" = "latest"
-"brew-cask:zoom" = "latest"
-"brew-cask:slack" = "latest"
-"brew-cask:discord" = "latest"
-
-# other
-"brew-cask:font-jetbrains-mono-nerd-font" = "latest"
-"brew-cask:spotify" = "latest"
-"brew-cask:betterdisplay" = "latest"
-"brew-cask:logi-options+" = "latest"
-"brew-cask:logitune" = "latest"
-"brew-cask:mitmproxy" = "latest"
-"brew-cask:android-platform-tools" = "latest"
-
-# Mac App Store
-"mas:302584613" = "latest"  # Kindle
-"mas:1475387142" = "latest" # Tailscale
-"mas:462058435" = "latest"  # Microsoft Excel
-"mas:462062816" = "latest"  # Microsoft PowerPoint
-"mas:1233965871" = "latest" # ScreenBrush
+[bootstrap.hooks]
+pre-packages = "bash mac/install-homebrew.sh"
 
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
@@ -80,10 +46,15 @@ login_shell = "/bin/zsh"
 [bootstrap.macos.keyboard]
 press_and_hold = false
 
+[tasks."bootstrap:brew-bundle"]
+description = "Install GUI casks and Mac App Store apps from mac/Brewfile"
+run = "brew bundle --file mac/Brewfile"
+
 [tasks.bootstrap]
 description = "Run idempotent macOS setup that does not fit declarative bootstrap"
 run = [
   "mise run bootstrap:oh-my-zsh",
   "mise run bootstrap:nvim",
   "mise run bootstrap:vscode-extensions",
+  "mise run bootstrap:brew-bundle",
 ]

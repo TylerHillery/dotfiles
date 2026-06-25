@@ -15,7 +15,7 @@ fzf = "latest"
 atuin = "latest"
 delta = "latest"
 neovim = "latest"
-btop = { version = "latest", os = ["linux", "macos"] }
+btop = { version = "latest", os = ["linux"] } # macOS: brew:btop (no aqua darwin build)
 opencode = "latest"
 
 # Programming Languages

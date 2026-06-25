@@ -18,7 +18,9 @@
         conflictStyle = zdiff3
 [branch]
         autoSetupMerge = false # so when I checkout another person's branch it doesn't auto set it as upstream
-[credential]
-	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://github.com"]
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !gh auth git-credential
 [credential "https://dev.azure.com"]
 	useHttpPath = true

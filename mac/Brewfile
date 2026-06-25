@@ -1,0 +1,47 @@
+# GUI casks and Mac App Store apps, installed via `brew bundle` by the
+# `bootstrap` task. Homebrew is installed by the pre-packages hook
+# (mac/install-homebrew.sh); CLIs, runtimes, and brew *formulae* are managed by
+# mise (../mise.toml, ../mise.macos.toml). Only casks and mas apps live here.
+
+# dev tools
+cask "google-chrome"
+cask "ghostty"
+cask "visual-studio-code"
+cask "datagrip"
+cask "orbstack"
+cask "lens"
+cask "wireshark-app"
+cask "ngrok"
+cask "yaak"
+cask "bitwarden"
+cask "utm"
+
+# productivity
+cask "alt-tab"
+cask "rectangle"
+cask "linear"
+cask "notion"
+cask "reader"
+cask "anki"
+cask "readdle-spark"
+cask "quarto"
+cask "obs"
+cask "zoom"
+cask "slack"
+cask "discord"
+
+# other
+cask "font-jetbrains-mono-nerd-font"
+cask "spotify"
+cask "betterdisplay"
+cask "logi-options+"
+cask "logitune"
+cask "mitmproxy"
+cask "android-platform-tools"
+
+# Mac App Store (requires the `mas` CLI, installed as brew:mas via mise)
+mas "Kindle", id: 302584613
+mas "Tailscale", id: 1475387142
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
+mas "ScreenBrush", id: 1233965871
