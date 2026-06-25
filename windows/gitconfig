@@ -9,8 +9,10 @@
         enabled = true
 [core]
         pager = delta
-		# windows defaults
-		autocrlf = true
+		# Keep Unix-style line endings in the working tree; normalize CRLF to LF on commit.
+		autocrlf = input
+		eol = lf
+		safecrlf = warn
 		fscache = true
 		symlinks = true
 [interactive]

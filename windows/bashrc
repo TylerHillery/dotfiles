@@ -8,10 +8,11 @@ case $- in
 esac
 
 # Prevent duplicate initialization when bashrc is sourced multiple times.
-if [ -n "${TYLER_BASHRC_LOADED:-}" ]; then
+if [ "${TYLER_BASHRC_LOADED:-}" = "${BASHPID:-$$}" ]; then
   return
 fi
-export TYLER_BASHRC_LOADED=1
+export -n TYLER_BASHRC_LOADED 2>/dev/null || true
+TYLER_BASHRC_LOADED="${BASHPID:-$$}"
 
 ##############
 # PROMPT
@@ -74,21 +75,25 @@ export TERM=xterm-256color
 # HISTORY
 ##############
 
-if [ -f "$HOME/.bash-preexec.sh" ]; then
-  source "$HOME/.bash-preexec.sh"
-fi
+: "${TYLER_ATUIN:=0}"
 
-_atuin_bin=""
-for _atuin_dir in "$HOME"/AppData/Local/mise/installs/atuin/*; do
-  if [ -x "$_atuin_dir/atuin.exe" ]; then
-    _atuin_bin="$_atuin_dir/atuin.exe"
+if [ "$TYLER_ATUIN" = 1 ]; then
+  if [ -f "$HOME/.bash-preexec.sh" ]; then
+    source "$HOME/.bash-preexec.sh"
   fi
-done
 
-if [ -n "$_atuin_bin" ]; then
-  eval "$("$_atuin_bin" init bash --disable-up-arrow)"
-elif command -v atuin >/dev/null 2>&1; then
-  eval "$(atuin init bash --disable-up-arrow)"
+  _atuin_bin=""
+  for _atuin_dir in "$HOME"/AppData/Local/mise/installs/atuin/*; do
+    if [ -x "$_atuin_dir/atuin.exe" ]; then
+      _atuin_bin="$_atuin_dir/atuin.exe"
+    fi
+  done
+
+  if [ -n "$_atuin_bin" ]; then
+    eval "$("$_atuin_bin" init bash --disable-up-arrow)"
+  elif command -v atuin >/dev/null 2>&1; then
+    eval "$(atuin init bash --disable-up-arrow)"
+  fi
 fi
 
 

@@ -51,11 +51,7 @@ default_mode = "symlink"
 
 [tasks.status]
 description = "Show bootstrap and dotfile status"
-run = [
-  "mise config",
-  "mise dotfiles status",
-  "mise bootstrap packages status",
-]
+run = "mise bootstrap status"
 
 [tasks."bootstrap:oh-my-zsh"]
 description = "Install oh-my-zsh if missing"

@@ -28,8 +28,3 @@ mise config
 mise bootstrap --dry-run
 mise bootstrap --yes
 ```
-
-Platform notes:
-- [macOS](mac/README.md)
-- [Linux/WSL](linux/README.md)
-- [Windows](windows/README.md)
