@@ -10,6 +10,7 @@
 "apt:build-essential" = "latest"
 "apt:pkg-config" = "latest"
 "apt:libssl-dev" = "latest"
+"apt:gdb" = "latest"
 "apt:ffmpeg" = "latest"
 
 [bootstrap.hooks.pre-packages]
