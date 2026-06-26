@@ -17,6 +17,7 @@ delta = "latest"
 neovim = "latest"
 btop = { version = "latest", os = ["linux"] } # macOS: brew:btop (no aqua darwin build)
 opencode = "latest"
+"aqua:quarto-dev/quarto-cli" = "latest"
 
 # Programming Languages
 rust = "latest"
