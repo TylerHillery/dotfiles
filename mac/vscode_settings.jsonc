@@ -1,7 +1,7 @@
 {
   // editor settings
   "editor.rulers": [80],
-  "editor.fontSize": 18,
+  "editor.fontSize": 16,
   "editor.insertSpaces": true,
   "editor.detectIndentation": true,
   "editor.formatOnSave": true,
@@ -68,7 +68,7 @@
     "terminalOverviewRuler.border": "#0000",
   },
   "search.defaultViewMode": "tree",
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 0,
   "window.nativeTabs": true,
   "window.title": "${rootName}",
   "window.commandCenter": false,
