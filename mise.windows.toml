@@ -23,3 +23,7 @@ run = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File windows/bootstrap
 [tasks."bootstrap:nvim"]
 description = "Install Windows Neovim config if missing"
 run = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File windows/scripts/install-neovim-config.ps1"
+
+[tasks."dotfiles:update-differs"]
+description = "Update dotfile sources whose live targets differ"
+run = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File windows/scripts/update-differing-dotfiles.ps1"
