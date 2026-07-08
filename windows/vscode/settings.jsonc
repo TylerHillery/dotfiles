@@ -94,6 +94,9 @@
   "[c]": {
     "editor.defaultFormatter": "xaver.clang-format",
   },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
@@ -114,6 +117,14 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true,
   },
+  "clangd.arguments": [
+    "--background-index",
+    "--clang-tidy",
+    "--completion-style=detailed",
+    "--header-insertion=iwyu",
+    "--function-arg-placeholders",
+  ],
+  "C_Cpp.intelliSenseEngine": "disabled",
   // extension settings
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   "mise.binPath": "C:\\Users\\Tyler\\AppData\\Local\\Microsoft\\WinGet\\Packages\\jdx.mise_Microsoft.Winget.Source_8wekyb3d8bbwe\\mise\\bin\\mise.exe",

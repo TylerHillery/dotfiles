@@ -8,9 +8,17 @@
 "apt:tree" = "latest"
 "apt:ca-certificates" = "latest"
 "apt:build-essential" = "latest"
+"apt:clang" = "latest"
+"apt:clangd" = "latest"
+"apt:clang-tools" = "latest"
+"apt:lld" = "latest"
+"apt:lldb" = "latest"
+"apt:llvm" = "latest"
 "apt:pkg-config" = "latest"
 "apt:libssl-dev" = "latest"
 "apt:gdb" = "latest"
+"apt:cmake" = "latest"
+"apt:ninja-build" = "latest"
 "apt:ffmpeg" = "latest"
 
 [bootstrap.hooks.pre-packages]
@@ -34,5 +42,6 @@ description = "Run idempotent Linux setup that does not fit declarative bootstra
 run = [
   "mise run bootstrap:oh-my-zsh",
   "mise run bootstrap:nvim",
+  "mise run bootstrap:vscode-extensions",
   "mise run bootstrap:wsl-conf",
 ]
