@@ -124,7 +124,7 @@
     "--clang-tidy",
     "--completion-style=detailed",
     "--header-insertion=iwyu",
-    "--function-arg-placeholders",
+    "--function-arg-placeholders=true",
   ],
   "C_Cpp.intelliSenseEngine": "disabled",
   // extension settings
