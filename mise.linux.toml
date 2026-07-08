@@ -24,6 +24,9 @@
 [bootstrap.hooks.pre-packages]
 run = "sudo apt-get update && sudo apt-get upgrade -y"
 
+[bootstrap.hooks.post-packages]
+run = "sudo apt-get autoremove --purge -y && sudo apt-get autoclean"
+
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
 "~/.config/mise/config.linux.toml" = { source = "mise.linux.toml", mode = "symlink" }
