@@ -131,6 +131,12 @@
         "newRemapKeys": "162;189"
       },
       {
+        "originalKeys": "164;190",
+        "exactMatch": false,
+        "operationType": 0,
+        "newRemapKeys": "162;190"
+      },
+      {
         "originalKeys": "164;160;37",
         "exactMatch": false,
         "operationType": 0,
@@ -223,7 +229,6 @@
       {
         "originalKeys": "162;164;70",
         "exactMatch": false,
-        "operationType": 0,
         "newRemapKeys": "122"
       },
       {
