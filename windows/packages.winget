@@ -116,3 +116,11 @@ resources:
       source: winget
       acceptAgreements: true
       useLatest: true
+
+  - name: Kindle
+    type: Microsoft.WinGet/Package
+    properties:
+      id: 9P8JQ0JJSTLL
+      source: msstore
+      acceptAgreements: true
+      useLatest: true
