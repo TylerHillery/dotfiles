@@ -30,7 +30,6 @@ go = "latest"
 shfmt = "latest"
 prettier = { version = "latest", depends = ["node"] }
 biome = "latest"
-clang-format = "latest"
 
 # DBs
 duckdb = "latest"

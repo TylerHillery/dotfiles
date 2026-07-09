@@ -41,6 +41,7 @@ ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
 ms-vscode.cpptools
 ms-vscode.cpp-devtools
+vadimcn.vscode-lldb
 xaver.clang-format
 
 # Rust
