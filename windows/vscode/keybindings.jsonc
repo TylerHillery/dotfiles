@@ -178,6 +178,11 @@
     "when": "terminalFocus && terminalHasBeenCreated && terminalSplitPaneActive || terminalFocus && terminalProcessSupported && terminalSplitPaneActive",
   },
   {
+    "key": "ctrl+o",
+    "command": "extension.vim_ctrl+o",
+    "when": "editorTextFocus && vim.active && !inDebugRepl",
+  },
+  {
     "key": "ctrl+[",
     "command": "extension.vim_escape",
     "when": "editorTextFocus && vim.active",
