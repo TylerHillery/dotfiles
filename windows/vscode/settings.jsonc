@@ -119,13 +119,6 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true,
   },
-  "clangd.arguments": [
-    "--background-index",
-    "--clang-tidy",
-    "--completion-style=detailed",
-    "--header-insertion=iwyu",
-    "--function-arg-placeholders=true",
-  ],
   "C_Cpp.intelliSenseEngine": "disabled",
   // extension settings
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
@@ -152,14 +145,6 @@
     "PowerShell": {
       "source": "PowerShell",
       "icon": "terminal-powershell",
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe",
-      ],
-      "args": [],
-      "icon": "terminal-cmd",
     },
     "Git Bash": {
       "path": "C:\\Program Files\\Git\\bin\\bash.exe",

@@ -123,13 +123,6 @@
   },
   "clang-format.executable": "/opt/homebrew/opt/llvm/bin/clang-format",
   "clangd.path": "/opt/homebrew/opt/llvm/bin/clangd",
-  "clangd.arguments": [
-    "--background-index",
-    "--clang-tidy",
-    "--completion-style=detailed",
-    "--header-insertion=iwyu",
-    "--function-arg-placeholders=true",
-  ],
   "C_Cpp.intelliSenseEngine": "disabled",
   // extension settings
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
