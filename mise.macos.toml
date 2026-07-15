@@ -53,13 +53,13 @@ press_and_hold = false
 description = "Install GUI casks and Mac App Store apps from mac/Brewfile"
 # eval shellenv so brew is found on a fresh machine where /opt/homebrew/bin
 # isn't on PATH yet (the pre-packages hook installs it in a separate process).
-run = 'eval "$(/opt/homebrew/bin/brew shellenv)" && brew bundle --file mac/Brewfile'
+run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && eval "$(/opt/homebrew/bin/brew shellenv)" && brew bundle --file mac/Brewfile'
 
 [tasks.bootstrap]
 description = "Run idempotent macOS setup that does not fit declarative bootstrap"
 run = [
-  "mise run bootstrap:oh-my-zsh",
-  "mise run bootstrap:nvim",
-  "mise run bootstrap:vscode-extensions",
-  "mise run bootstrap:brew-bundle",
+  'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:oh-my-zsh',
+  'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:nvim',
+  'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:vscode-extensions',
+  'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:brew-bundle',
 ]

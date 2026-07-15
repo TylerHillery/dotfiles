@@ -42,7 +42,6 @@ gcloud = { version = "latest", os = ["linux", "macos"] }
 
 
 [settings]
-experimental = true
 idiomatic_version_file_enable_tools = ["python", "node"]
 status.missing_tools = "never"
 
@@ -55,24 +54,24 @@ run = "mise bootstrap status"
 
 [tasks."bootstrap:oh-my-zsh"]
 description = "Install oh-my-zsh if missing"
-run = "bash shared/bootstrap/install-oh-my-zsh.sh"
+run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash shared/bootstrap/install-oh-my-zsh.sh'
 
 [tasks."bootstrap:vscode-extensions"]
 description = "Install shared VS Code extensions"
-run = "bash shared/bootstrap/install-vscode-extensions.sh shared/vscode/extensions.txt"
+run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash shared/bootstrap/install-vscode-extensions.sh shared/vscode/extensions.txt'
 
 [tasks."bootstrap:nvim"]
 description = "Install Neovim config if missing"
-run = "bash shared/bootstrap/install-neovim-config.sh"
+run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash shared/bootstrap/install-neovim-config.sh'
 
 [tasks."bootstrap:wsl-conf"]
 description = "Apply WSL system config when running inside WSL"
-run = "bash linux/apply-wsl-conf.sh"
+run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash linux/apply-wsl-conf.sh'
 
 [tasks."bootstrap:tailscale"]
 description = "Install and start Tailscale on Linux"
-run = "bash linux/install-tailscale.sh"
+run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash linux/install-tailscale.sh'
 
 [tasks."bootstrap:opencode-server"]
 description = "Install and start the OpenCode user service"
-run = "bash linux/install-opencode-server.sh"
+run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash linux/install-opencode-server.sh'

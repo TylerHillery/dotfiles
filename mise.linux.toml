@@ -46,8 +46,8 @@ login_shell = "/usr/bin/zsh"
 [tasks.bootstrap]
 description = "Run idempotent Linux setup that does not fit declarative bootstrap"
 run = [
-  "mise run bootstrap:oh-my-zsh",
-  "mise run bootstrap:nvim",
-  "mise run bootstrap:vscode-extensions",
-  "mise run bootstrap:wsl-conf",
+  'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:oh-my-zsh',
+  'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:nvim',
+  'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:vscode-extensions',
+  'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:wsl-conf',
 ]
