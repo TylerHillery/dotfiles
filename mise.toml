@@ -68,3 +68,7 @@ run = "bash shared/bootstrap/install-neovim-config.sh"
 [tasks."bootstrap:wsl-conf"]
 description = "Apply WSL system config when running inside WSL"
 run = "bash linux/apply-wsl-conf.sh"
+
+[tasks."bootstrap:tailscale"]
+description = "Install and start Tailscale on Linux"
+run = "bash linux/install-tailscale.sh"
