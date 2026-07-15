@@ -47,6 +47,9 @@ xaver.clang-format
 # Rust
 rust-lang.rust-analyzer
 
+# Mojo
+modular-mojotools.vscode-mojo
+
 # Java
 redhat.java
 vscjava.vscode-gradle
