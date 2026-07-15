@@ -72,3 +72,7 @@ run = "bash linux/apply-wsl-conf.sh"
 [tasks."bootstrap:tailscale"]
 description = "Install and start Tailscale on Linux"
 run = "bash linux/install-tailscale.sh"
+
+[tasks."bootstrap:opencode-server"]
+description = "Install and start the OpenCode user service"
+run = "bash linux/install-opencode-server.sh"
