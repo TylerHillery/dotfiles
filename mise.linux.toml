@@ -36,7 +36,7 @@ run = "sudo apt-get autoremove --purge -y && sudo apt-get autoclean"
 "~/.gitconfig" = { source = "linux/gitconfig", mode = "symlink" }
 "~/.aws/config" = { source = "shared/aws/config", mode = "symlink" }
 "~/.zshrc" = { source = "linux/zshrc", mode = "symlink" }
-"~/.tmux.conf" = { source = "linux/tmux.conf", mode = "symlink" }
+"~/.tmux.conf" = { source = "shared/tmux.conf", mode = "symlink" }
 "~/.config/atuin/config.toml" = { source = "linux/atuin_config.toml", mode = "symlink" }
 "~/.oh-my-zsh/custom/themes/tylerhillery.zsh-theme" = { source = "shared/zsh/tylerhillery.zsh-theme", mode = "symlink" }
 

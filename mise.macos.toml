@@ -35,7 +35,7 @@ pre-packages = "bash mac/install-homebrew.sh"
 "~/.config/mise/config.macos.toml" = { source = "mise.macos.toml", mode = "symlink" }
 "~/.gitconfig" = { source = "mac/gitconfig", mode = "symlink" }
 "~/.zshrc" = { source = "mac/zshrc", mode = "symlink" }
-"~/.tmux.conf" = { source = "mac/tmux.conf", mode = "symlink" }
+"~/.tmux.conf" = { source = "shared/tmux.conf", mode = "symlink" }
 "~/.config/atuin/config.toml" = { source = "mac/atuin_config.toml", mode = "symlink" }
 "~/.config/ghostty/config" = { source = "mac/ghostty_config", mode = "symlink" }
 "~/.config/ghostty/vim.ghostty" = { source = "mac/vim.ghostty", mode = "symlink" }
