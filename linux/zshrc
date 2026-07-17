@@ -37,6 +37,12 @@ if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
 
+# Use bat for highlighted man pages when available.
+if command -v bat >/dev/null 2>&1; then
+  export GROFF_NO_SGR=1
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+fi
+
 # atuin for better ctrl+r
 if command -v atuin >/dev/null 2>&1; then
   eval "$(atuin init zsh --disable-up-arrow)"

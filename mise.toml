@@ -10,6 +10,7 @@ prek = "latest"
 ripgrep = "latest"
 fd = "latest"
 fzf = "latest"
+bat = "latest"
 
 # Personal
 atuin = "latest"
