@@ -44,11 +44,8 @@ eval "$(atuin init zsh --disable-up-arrow)"
 # manage versions across various tools
 eval "$(mise activate zsh)"
 
-# Use bat for highlighted man pages when available.
-if command -v bat >/dev/null 2>&1; then
-  export GROFF_NO_SGR=1
-  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-fi
+# Use Neovim's built-in man page viewer.
+export MANPAGER='nvim +Man!'
 
 # orbstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
