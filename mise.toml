@@ -69,6 +69,10 @@ run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash shared/bootstrap/install-neovim-c
 description = "Apply WSL system config when running inside WSL"
 run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash linux/apply-wsl-conf.sh'
 
+[tasks."bootstrap:win32yank"]
+description = "Install win32yank for Neovim clipboard support in WSL"
+run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash linux/install-win32yank.sh'
+
 [tasks."bootstrap:tailscale"]
 description = "Install and start Tailscale on Linux"
 run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash linux/install-tailscale.sh'

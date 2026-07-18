@@ -49,5 +49,6 @@ run = [
   'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:oh-my-zsh',
   'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:nvim',
   'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:vscode-extensions',
+  'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:win32yank',
   'cd "${MISE_ORIGINAL_CWD:-$PWD}" && mise run bootstrap:wsl-conf',
 ]
