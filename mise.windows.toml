@@ -1,3 +1,21 @@
+[bootstrap.packages]
+"winget:Google.Chrome" = "latest"
+"winget:Microsoft.PowerToys" = "latest"
+"winget:Microsoft.WindowsAppRuntime.2.0" = "latest"
+"winget:Git.Git" = "latest"
+"winget:Microsoft.VisualStudioCode" = "latest"
+"winget:Microsoft.WindowsTerminal" = "latest"
+"winget:Microsoft.WSL" = "latest"
+"winget:Tailscale.Tailscale" = "latest"
+"winget:DEVCOM.JetBrainsMonoNerdFont" = "latest"
+"winget:Logitech.Options" = "latest"
+"winget:Docker.DockerDesktop" = "latest"
+"winget:Notion.Notion" = "latest"
+"winget:Readdle.Spark" = "latest"
+"winget:OBSProject.OBSStudio" = "latest"
+# Kindle from the Microsoft Store; Store packages use product IDs instead of names.
+"winget:9P8JQ0JJSTLL" = "latest"
+
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
 "~/.config/mise/config.windows.toml" = { source = "mise.windows.toml", mode = "symlink" }
