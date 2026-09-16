@@ -12,7 +12,7 @@ if ! systemctl --user status >/dev/null 2>&1; then
 fi
 
 service_dir="$HOME/.config/systemd/user"
-repo_dir="$(pwd)"
+repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 service_src="$repo_dir/linux/systemd/user/opencode-server.service"
 service_dst="$service_dir/opencode-server.service"
 

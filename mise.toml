@@ -79,4 +79,4 @@ run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash linux/install-tailscale.sh'
 
 [tasks."bootstrap:opencode-server"]
 description = "Install and start the OpenCode user service"
-run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash linux/install-opencode-server.sh'
+run = 'repo_dir="$(dirname "$(readlink -f "$HOME/.config/mise/config.toml")")" && bash "$repo_dir/linux/install-opencode-server.sh"'
