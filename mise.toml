@@ -1,4 +1,4 @@
-min_version = { soft = "2026.6.13" }
+min_version = { soft = "2026.9.9" }
 
 [tools]
 # Core

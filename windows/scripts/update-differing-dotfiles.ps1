@@ -43,24 +43,24 @@ if (-not $DryRun) {
     Assert-NoUnstagedChanges
 }
 
-$status = mise dotfiles status
+$status = mise dot status
 if ($LASTEXITCODE -ne 0) {
-    throw "Failed to inspect mise dotfiles status."
+    throw "Failed to inspect mise dot status."
 }
 
 $targets = @()
 foreach ($line in $status) {
-    if ($line -match '^Target\s+Mode\s+Source\s+State$' -or [string]::IsNullOrWhiteSpace($line)) {
+    if ($line -match '^Target\s+Mode\s+Source\s+' -or [string]::IsNullOrWhiteSpace($line)) {
         continue
     }
 
-    $columns = $line -split '\s{2,}', 4
+    $columns = $line -split '\s{2,}'
     if ($columns.Count -lt 4) {
         continue
     }
 
     $target = $columns[0].Trim()
-    $state = $columns[3].Trim()
+    $state = $columns[-1].Trim()
 
     if ($state -like 'differs*') {
         $targets += $target
@@ -75,7 +75,7 @@ if ($targets.Count -eq 0) {
 "Differing dotfiles:"
 $targets | ForEach-Object { "  $_" }
 
-$args = @('dotfiles', 'add')
+$args = @('dot', 'add')
 if ($DryRun) {
     $args += '--dry-run'
 }
@@ -94,7 +94,7 @@ if (-not $DryRun -and -not $Yes) {
 
 mise @args
 if ($LASTEXITCODE -ne 0) {
-    throw "mise dotfiles add failed."
+    throw "mise dot add failed."
 }
 
 if (-not $DryRun) {

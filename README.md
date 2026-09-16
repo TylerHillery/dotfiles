@@ -1,6 +1,6 @@
 # Dotfiles
 
-This repo is managed by mise bootstrap and mise dotfiles.
+This repo is managed by mise.
 
 ## Fresh install
 
@@ -10,7 +10,7 @@ Windows:
 
 ```powershell
 winget install jdx.mise --exact --source winget
-winget install Git.Git mise --exact --source winget
+winget install Git.Git --exact --source winget
 ```
 
 macOS/Linux:
@@ -27,6 +27,29 @@ cd dotfiles
 mise config
 mise bootstrap --dry-run
 mise bootstrap --yes
+```
+
+## Common commands
+
+Inspect managed state:
+
+```bash
+mise bootstrap status
+mise dot status
+mise dot diff
+```
+
+Apply repo dotfiles to live targets:
+
+```bash
+mise dot apply --yes
+```
+
+On Windows, copy changed live targets back into the repo when symlinks or apps drift:
+
+```bash
+mise run dotfiles:update-differs -- --DryRun
+mise run dotfiles:update-differs
 ```
 
 ## OpenCode server
