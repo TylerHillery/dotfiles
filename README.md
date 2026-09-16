@@ -52,6 +52,12 @@ mise run dotfiles:update-differs -- --DryRun
 mise run dotfiles:update-differs
 ```
 
+List installed VS Code extensions missing from the shared extension list:
+
+```bash
+mise run vscode:extensions:missing
+```
+
 ## OpenCode server
 
 Start:
