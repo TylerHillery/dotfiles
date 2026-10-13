@@ -36,6 +36,7 @@ biome = "latest"
 duckdb = "latest"
 
 # Vendor CLIs
+bitwarden = "latest"
 gh = "latest"
 pulumi = "latest"
 aws-cli = { version = "latest", os = ["linux"] }
