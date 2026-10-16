@@ -29,9 +29,6 @@ export EDITOR="nvim"
 export TERM=xterm-256color
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
-# opencode
-export PATH="$HOME/.opencode/bin:$PATH"
-
 # manage versions across various tools
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
