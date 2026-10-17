@@ -8,6 +8,7 @@
 "apt:tree" = "latest"
 "apt:ca-certificates" = "latest"
 "apt:build-essential" = "latest"
+"apt:libatomic1" = "latest"
 "apt:clang" = "latest"
 "apt:clangd" = "latest"
 "apt:clang-format" = "latest"
@@ -25,11 +26,15 @@
 "apt:ninja-build" = "latest"
 "apt:ffmpeg" = "latest"
 
-[bootstrap.hooks.pre-packages]
-run = "sudo apt-get update && sudo apt-get upgrade -y"
+[tasks."maintenance:upgrade"]
+description = "Review and apply Ubuntu package upgrades separately from bootstrap"
+confirm = { message = "Refresh apt metadata and review available upgrades?", default = "no" }
+run = "sudo apt-get update && sudo apt-get upgrade"
 
-[bootstrap.hooks.post-packages]
-run = "sudo apt-get autoremove --purge -y && sudo apt-get autoclean"
+[tasks."maintenance:autoremove"]
+description = "Review and remove unused Ubuntu packages separately from bootstrap"
+confirm = { message = "Review packages apt proposes to remove and purge?", default = "no" }
+run = "sudo apt-get autoremove --purge && sudo apt-get autoclean"
 
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }

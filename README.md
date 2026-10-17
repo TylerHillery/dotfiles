@@ -29,6 +29,11 @@ mise bootstrap --dry-run
 mise bootstrap --yes
 ```
 
+On Linux, normal bootstrap installs the declared apt packages but does not
+upgrade unrelated packages or purge unused ones. Run
+`mise run maintenance:upgrade` or `mise run maintenance:autoremove` separately when you
+want to review apt's proposed changes; both commands prompt before proceeding.
+
 ## Common commands
 
 Inspect managed state:
