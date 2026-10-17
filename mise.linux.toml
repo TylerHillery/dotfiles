@@ -17,7 +17,7 @@
 "apt:lld" = "latest"
 "apt:lldb" = "latest"
 "apt:llvm" = "latest"
-"apt:qemu-system-riscv" = "latest"
+"apt:qemu-system-misc" = "latest"
 "apt:qemu-system-x86" = "latest"
 "apt:pkg-config" = "latest"
 "apt:libssl-dev" = "latest"
