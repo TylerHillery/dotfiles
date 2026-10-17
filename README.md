@@ -69,12 +69,12 @@ Start:
 
 ```bash
 systemctl --user enable --now opencode-server.service
-tailscale serve --bg --https=443 http://127.0.0.1:4096
+sudo tailscale serve --bg --https=443 http://127.0.0.1:4096
 ```
 
 Stop:
 
 ```bash
-tailscale serve --https=443 off
+sudo tailscale serve --https=443 off
 systemctl --user disable --now opencode-server.service
 ```
