@@ -57,7 +57,7 @@ mise run dotfiles:update-differs -- --DryRun
 mise run dotfiles:update-differs
 ```
 
-List installed VS Code extensions missing from the shared extension list:
+Compare installed VS Code extensions with the shared extension list (in both directions):
 
 ```bash
 mise run vscode:extensions:missing

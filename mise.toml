@@ -63,8 +63,8 @@ description = "Install shared VS Code extensions"
 run = 'cd "${MISE_ORIGINAL_CWD:-$PWD}" && bash shared/bootstrap/install-vscode-extensions.sh shared/vscode/extensions.txt'
 
 [tasks."vscode:extensions:missing"]
-description = "List installed VS Code extensions missing from shared/vscode/extensions.txt"
-run = "bash shared/bootstrap/check-vscode-extensions.sh shared/vscode/extensions.txt"
+description = "Compare installed VS Code extensions with shared/vscode/extensions.txt"
+run = 'repo_dir="$(dirname "$(readlink -f "$HOME/.config/mise/config.toml")")" && bash "$repo_dir/shared/bootstrap/check-vscode-extensions.sh" "$repo_dir/shared/vscode/extensions.txt"'
 
 [tasks."bootstrap:nvim"]
 description = "Install Neovim config if missing"

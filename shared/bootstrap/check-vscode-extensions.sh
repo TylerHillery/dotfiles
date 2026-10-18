@@ -25,12 +25,23 @@ code --list-extensions |
 	tr '[:upper:]' '[:lower:]' |
 	sort -u >"$installed_extensions"
 
-missing_extensions="$(comm -23 "$installed_extensions" "$tracked_extensions")"
+untracked_extensions="$(comm -23 "$installed_extensions" "$tracked_extensions")"
+not_installed_extensions="$(comm -13 "$installed_extensions" "$tracked_extensions")"
 
-if [ -z "$missing_extensions" ]; then
-	echo "All installed VS Code extensions are tracked."
+if [ -z "$untracked_extensions" ] && [ -z "$not_installed_extensions" ]; then
+	echo "Installed VS Code extensions match $extensions_file."
 	exit 0
 fi
 
-echo "Installed VS Code extensions missing from $extensions_file:"
-echo "$missing_extensions"
+if [ -n "$untracked_extensions" ]; then
+	echo "Installed VS Code extensions not in $extensions_file (consider adding):"
+	echo "$untracked_extensions"
+fi
+
+if [ -n "$not_installed_extensions" ]; then
+	if [ -n "$untracked_extensions" ]; then
+		echo
+	fi
+	echo "Extensions in $extensions_file not installed (consider installing or removing):"
+	echo "$not_installed_extensions"
+fi

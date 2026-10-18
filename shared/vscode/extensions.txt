@@ -11,6 +11,7 @@ mikestead.dotenv
 tamasfe.even-better-toml
 bierner.markdown-mermaid
 github.vscode-github-actions
+github.vscode-pull-request-github
 bbenoist.nix
 foxundermoon.shell-format
 ms-vscode.hexeditor
@@ -39,6 +40,7 @@ ms-toolsai.vscode-jupyter-slideshow
 
 # C and C++
 llvm-vs-code-extensions.vscode-clangd
+llvm-vs-code-extensions.vscode-mlir
 ms-vscode.cmake-tools
 ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
@@ -86,3 +88,12 @@ denoland.vscode-deno
 ritwickdey.liveserver
 bradlc.vscode-tailwindcss
 quarto.quarto
+
+# DevOps 
+coolbear.systemd-unit-file
+hashicorp.hcl
+hashicorp.terraform
+
+# Networking
+matthewpi.caddyfile-support
+zhanghanwang.p4-lang
