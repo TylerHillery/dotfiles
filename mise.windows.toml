@@ -19,6 +19,8 @@
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
 "~/.config/mise/config.windows.toml" = { source = "mise.windows.toml", mode = "symlink" }
+"~/.config/opencode/cli.json" = { source = "shared/opencode/cli.json", mode = "symlink" }
+"~/.config/opencode/opencode.json" = { source = "shared/opencode/opencode.json", mode = "symlink" }
 "~/.bashrc" = { source = "windows/bashrc", mode = "symlink" }
 "~/.bash_profile" = { source = "windows/bash_profile", mode = "symlink" }
 "~/.inputrc" = { source = "windows/inputrc", mode = "symlink" }

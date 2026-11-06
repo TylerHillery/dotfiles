@@ -33,6 +33,8 @@ pre-packages = "bash mac/install-homebrew.sh"
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
 "~/.config/mise/config.macos.toml" = { source = "mise.macos.toml", mode = "symlink" }
+"~/.config/opencode/cli.json" = { source = "shared/opencode/cli.json", mode = "symlink" }
+"~/.config/opencode/opencode.json" = { source = "shared/opencode/opencode.json", mode = "symlink" }
 "~/.gitconfig" = { source = "mac/gitconfig", mode = "symlink" }
 "~/.zshrc" = { source = "mac/zshrc", mode = "symlink" }
 "~/.tmux.conf" = { source = "shared/tmux.conf", mode = "symlink" }
