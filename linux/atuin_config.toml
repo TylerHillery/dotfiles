@@ -12,3 +12,10 @@ columns = ["duration", "command"]
 
 [ai]
 enabled = true
+
+[daemon]
+enabled = true
+autostart = true
+
+[threads]
+capture = true
