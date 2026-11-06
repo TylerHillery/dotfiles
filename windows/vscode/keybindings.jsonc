@@ -187,4 +187,8 @@
     "command": "extension.vim_escape",
     "when": "editorTextFocus && vim.active",
   },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent",
+  },
 ]

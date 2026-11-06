@@ -89,7 +89,7 @@ ritwickdey.liveserver
 bradlc.vscode-tailwindcss
 quarto.quarto
 
-# DevOps 
+# DevOps
 coolbear.systemd-unit-file
 hashicorp.hcl
 hashicorp.terraform
