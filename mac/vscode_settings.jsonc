@@ -125,6 +125,9 @@
   "clangd.path": "/opt/homebrew/opt/llvm/bin/clangd",
   "C_Cpp.intelliSenseEngine": "disabled",
   // extension settings
+  // Use stable mise shims even when VS Code cannot resolve the shell PATH.
+  "todo-tree.ripgrep.ripgrep": "/Users/tyler/.local/share/mise/shims/rg",
+  "direnv.path.executable": "/Users/tyler/.local/share/mise/shims/direnv",
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   // gitlens,
   "gitlens.codeLens.recentChange.enabled": true,

@@ -1,3 +1,14 @@
+# Make mise tools available before initializing any shell integrations.
+export PATH="$HOME/.local/bin:$HOME/.local/share/mise/shims:$PATH"
+
+# VS Code launches an interactive login shell just to read its environment.
+# It needs tool paths, not prompts, update checks, or terminal/daemon hooks.
+if [[ "${VSCODE_RESOLVING_ENVIRONMENT:-}" == "1" ]]; then
+  export PATH="/opt/homebrew/opt/libpq/bin:/opt/homebrew/opt/postgresql@17/bin:$PATH"
+  export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  return
+fi
+
 ##############
 # BASIC SETUP
 ##############
