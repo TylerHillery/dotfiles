@@ -19,6 +19,12 @@
     "command": "-workbench.action.splitEditor",
   },
   {
+    // cmd+d is taken by split; match Windows' ctrl+d for add-next-match
+    "key": "ctrl+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus",
+  },
+  {
     "key": "cmd+d",
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile",

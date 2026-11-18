@@ -364,7 +364,22 @@
         "newRemapKeys": "91;40"
       }
     ],
-    "appSpecific": []
+    "appSpecific": [
+      {
+        "originalKeys": "91;164;38",
+        "exactMatch": false,
+        "operationType": 0,
+        "newRemapKeys": "162;164;38",
+        "targetApp": "code.exe"
+      },
+      {
+        "originalKeys": "91;164;40",
+        "exactMatch": false,
+        "operationType": 0,
+        "newRemapKeys": "162;164;40",
+        "targetApp": "code.exe"
+      }
+    ]
   },
   "remapShortcutsToText": { "global": [], "appSpecific": [] }
 }
