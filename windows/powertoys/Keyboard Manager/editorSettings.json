@@ -1291,6 +1291,44 @@
       },
       "Profiles": [],
       "IsActive": true
+    },
+    "6002e54d-21a9-488d-abdb-e13fcf059d3b": {
+      "Id": "6002e54d-21a9-488d-abdb-e13fcf059d3b",
+      "Shortcut": {
+        "OriginalKeys": "91;164;38",
+        "TargetKeys": "162;164;38",
+        "TargetApp": "code.exe",
+        "OperationType": 0,
+        "TargetText": "",
+        "ProgramPath": "",
+        "ProgramArgs": "",
+        "StartInDirectory": "",
+        "Elevation": 0,
+        "IfRunningAction": 0,
+        "Visibility": 0,
+        "UriToOpen": ""
+      },
+      "Profiles": [],
+      "IsActive": true
+    },
+    "b8c424f3-e31c-4eda-b126-a4253a9ecd39": {
+      "Id": "b8c424f3-e31c-4eda-b126-a4253a9ecd39",
+      "Shortcut": {
+        "OriginalKeys": "91;164;40",
+        "TargetKeys": "162;164;40",
+        "TargetApp": "code.exe",
+        "OperationType": 0,
+        "TargetText": "",
+        "ProgramPath": "",
+        "ProgramArgs": "",
+        "StartInDirectory": "",
+        "Elevation": 0,
+        "IfRunningAction": 0,
+        "Visibility": 0,
+        "UriToOpen": ""
+      },
+      "Profiles": [],
+      "IsActive": true
     }
   },
   "ProfileDictionary": {},
@@ -1363,7 +1401,9 @@
       "ba00c27e-c6ae-4008-a246-c63d4756a18a",
       "a5c7e149-988f-45ff-8ce1-b78ca541b5e7",
       "a6c2b2a9-9101-4f3c-84d6-4a62de698003",
-      "39466f80-93f0-4fa9-a389-d61ec4b608de"
+      "39466f80-93f0-4fa9-a389-d61ec4b608de",
+      "6002e54d-21a9-488d-abdb-e13fcf059d3b",
+      "b8c424f3-e31c-4eda-b126-a4253a9ecd39"
     ]
   },
   "ActiveProfile": ""
