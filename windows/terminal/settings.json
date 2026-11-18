@@ -4,12 +4,6 @@
   "actions": [
     {
       "command": {
-        "action": "closeTab"
-      },
-      "id": "User.closeTab.0"
-    },
-    {
-      "command": {
         "action": "splitPane",
         "split": "right",
         "splitMode": "duplicate"
@@ -18,10 +12,17 @@
     },
     {
       "command": {
-        "action": "moveFocus",
-        "direction": "previousInOrder"
+        "action": "closeTab"
       },
-      "id": "User.moveFocus.787314EB"
+      "id": "User.closeTab.0"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "down",
+        "splitMode": "duplicate"
+      },
+      "id": "User.splitPane.D5151347"
     },
     {
       "command": {
@@ -32,11 +33,10 @@
     },
     {
       "command": {
-        "action": "splitPane",
-        "split": "down",
-        "splitMode": "duplicate"
+        "action": "moveFocus",
+        "direction": "previousInOrder"
       },
-      "id": "User.splitPane.D5151347"
+      "id": "User.moveFocus.787314EB"
     },
     {
       "command": {
@@ -68,19 +68,19 @@
   "copyOnSelect": true,
   "defaultProfile": "{289b2333-287d-5cd6-9f31-6edf359d4693}",
   "disableAnimations": true,
-  "firstWindowPreference": "persistedWindowLayout",
+  "firstWindowPreference": "persistedLayoutAndContent",
   "keybindings": [
     {
       "id": "User.duplicateTab",
       "keys": "ctrl+t"
     },
     {
-      "id": null,
-      "keys": "ctrl+shift+w"
-    },
-    {
       "id": "Terminal.PasteFromClipboard",
       "keys": "ctrl+v"
+    },
+    {
+      "id": null,
+      "keys": "ctrl+shift+w"
     },
     {
       "id": null,
@@ -111,12 +111,12 @@
       "keys": "ctrl+w"
     },
     {
-      "id": "Terminal.ResizePaneDown",
-      "keys": "alt+shift+j"
-    },
-    {
       "id": "User.closeTab.0",
       "keys": "alt+shift+w"
+    },
+    {
+      "id": "Terminal.ResizePaneDown",
+      "keys": "alt+shift+j"
     },
     {
       "id": "User.splitPane.D5151347",

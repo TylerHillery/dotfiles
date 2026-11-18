@@ -31,7 +31,7 @@
     "PowerToys Run": true,
     "QuickAccent": false,
     "RegistryPreview": false,
-    "Shortcut Guide": true,
+    "Shortcut Guide": false,
     "TextExtractor": false,
     "Workspaces": true,
     "ZoomIt": true

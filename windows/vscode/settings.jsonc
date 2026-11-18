@@ -158,4 +158,5 @@
     "workbench.action.terminal.focusNext",
     "workbench.action.terminal.focusPrevious",
   ],
+  "chat.titleBar.openInAgentsWindow.enabled": false,
 }
