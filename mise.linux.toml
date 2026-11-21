@@ -37,6 +37,8 @@ confirm = { message = "Review packages apt proposes to remove and purge?", defau
 run = "sudo apt-get autoremove --purge && sudo apt-get autoclean"
 
 [dotfiles]
+"~/.config/Code/User/settings.json" = { source = "linux/vscode_settings.jsonc", mode = "symlink" }
+"~/.vscode-server/data/Machine/settings.json" = { source = "linux/vscode_settings.jsonc", mode = "symlink" }
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
 "~/.config/mise/config.linux.toml" = { source = "mise.linux.toml", mode = "symlink" }
 "~/.config/opencode/cli.json" = { source = "shared/opencode/cli.json", mode = "symlink" }

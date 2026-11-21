@@ -121,6 +121,8 @@
   },
   "C_Cpp.intelliSenseEngine": "disabled",
   // extension settings
+  // Todo Tree checks an explicit path instead of looking up rg on PATH.
+  "todo-tree.ripgrep.ripgrep": "C:\\Users\\Tyler\\AppData\\Local\\mise\\shims\\rg.exe",
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   "mise.binPath": "C:\\Users\\Tyler\\AppData\\Local\\Microsoft\\WinGet\\Packages\\jdx.mise_Microsoft.Winget.Source_8wekyb3d8bbwe\\mise\\bin\\mise.exe",
   // gitlens,

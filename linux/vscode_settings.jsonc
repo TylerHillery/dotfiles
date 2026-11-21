@@ -1,0 +1,4 @@
+{
+  // Use the Linux executable, including when connecting from Windows or macOS.
+  "todo-tree.ripgrep.ripgrep": "/home/tyler/.local/share/mise/shims/rg",
+}
